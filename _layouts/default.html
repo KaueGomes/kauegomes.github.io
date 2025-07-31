@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/theme/light_mode.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/theme/dark_mode.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/theme/sephia_mode.css' | relative_url }}">
+    <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div class="layout-horizontal">
+      <div class="menu-icon" id="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <aside id="sidebar" class="sidebar">
+        {% include menu.html %}
+      </aside>
+      <main class="main-content">
+        {{ content }}
+        {% include footer.html %}
+      </main>
+    </div>
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  </body>
+</html> 

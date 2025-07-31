@@ -1,0 +1,38 @@
+---
+---
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/theme/light_mode.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/theme/dark_mode.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/theme/sephia_mode.css' | relative_url }}">
+  </head>
+  <body>
+    <div class="layout-horizontal">
+      <aside class="sidebar">
+        {% include menu.html %}
+      </aside>
+      <main class="main-content">
+        <h1>{{ page.title }}</h1>
+        <p class="post-date">{{ page.date | date: "%d/%m/%Y %H:%M" }}</p>
+        {% if page.image %}
+          <img class="post-cover" src="{{ page.image }}" alt="{{ page.title }}">
+        {% endif %}
+        {{ content }}
+        {% if page.tags %}
+          <p class="post-tags">Tags: 
+            {% for tag in page.tags %}
+              <a href="/tags/{{ tag | slugify }}/">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+            {% endfor %}
+          </p>
+        {% endif %}
+        {% include footer.html %}
+      </main>
+    </div>
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  </body>
+</html>

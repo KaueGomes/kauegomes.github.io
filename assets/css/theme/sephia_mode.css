@@ -1,0 +1,79 @@
+body.sephia-mode {
+  --background-color: #f4ecd8;
+  --text-color: #5b4636;
+  --menu-background-color: #5b4636;
+  --menu-text-color: #fff;
+  --link-color: #7c4f1d;
+  --link-hover-background: #5b4636;
+  --link-hover-color: #fff;
+}
+
+body.sephia-mode {
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+body.sephia-mode .main-content {
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+body.sephia-mode .sidebar {
+  background: #e2cfa5;
+  color: var(--text-color);
+}
+
+body.sephia-mode .menu a {
+  color: var(--text-color);
+}
+
+body.sephia-mode .menu a:hover {
+  background: #d1bfa3;
+}
+
+body.sephia-mode .sidebar-profile .profile-desc {
+  color: #a68b6b;
+}
+
+body.sephia-mode .post-block {
+  background: #f8f3e6;
+  color: var(--text-color);
+}
+
+body.sephia-mode .post-excerpt {
+  color: var(--text-color);
+}
+
+body.sephia-mode .post-link {
+  background: #a68b6b;
+  color: #fff;
+}
+
+body.sephia-mode .post-link:hover {
+  background: #8b7355;
+}
+
+body.sephia-mode .sidebar-social a {
+  color: #a68b6b;
+}
+
+body.sephia-mode .sidebar-social a:hover {
+  color: var(--text-color);
+}
+
+body.sephia-mode .post-title a {
+  color: #7c4f1d;
+}
+
+body.sephia-mode .post-title a:hover {
+  color: var(--text-color);
+}
+
+body.sephia-mode .theme-label {
+  color: var(--text-color);
+}
+
+body.sephia-mode .sidebar-content.active {
+  background: #e2cfa5;
+  color: var(--menu-text-color);
+}

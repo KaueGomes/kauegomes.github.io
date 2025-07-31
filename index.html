@@ -1,0 +1,46 @@
+---
+layout: default
+title: Início
+---
+
+<div class="posts-list">
+  {% for post in paginator.posts %}
+    <article class="post-preview">
+      <h2 class="post-title">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h2>
+      <p class="post-date">{{ post.date | date: "%d/%m/%Y %H:%M" }}</p>
+      {% if post.image %}
+        <img class="post-cover" src="{{ post.image }}" alt="{{ post.title }}">
+      {% endif %}
+      <div class="post-excerpt">
+        {{ post.excerpt | strip_html | truncate: 220 }}
+      </div>
+      <a class="post-link" href="{{ post.url | relative_url }}">Leia mais</a>
+      <hr>
+    </article>
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a class="pagination-link" href="{{ paginator.previous_page_path | relative_url }}">&laquo; Anterior</a>
+  {% endif %}
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <span class="pagination-link active">{{ page }}</span>
+    {% elsif page == 1 %}
+      <a class="pagination-link" href="{{ site.paginate_path | relative_url | replace: 'page:num/', '' }}">{{ page }}</a>
+    {% else %}
+      <a class="pagination-link" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
+  {% if paginator.next_page %}
+    <a class="pagination-link" href="{{ paginator.next_page_path | relative_url }}">Próxima &raquo;</a>
+  {% endif %}
+</div> 
+
+<script>
+    console.log('Paginate Path:', '{{ site.paginate_path }}');
+    console.log('relative_url:', '{{ relative_url }}');
+</script>

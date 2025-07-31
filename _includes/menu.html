@@ -1,0 +1,29 @@
+<div class="sidebar-content">
+  <div class="sidebar-profile">
+    <img src="/assets/img/profile.webp" alt="Sua foto" class="profile-pic">
+    <h2>Seu Nome</h2>
+    <p class="profile-desc">Breve descrição sobre você.</p>
+  </div>
+  <nav class="menu">
+    <ul>
+      <li><a href="/">Início</a></li>
+      <li><a href="/tags.html">Tags</a></li>
+      <li><a href="/about.html">Sobre</a></li>
+      <li><a href="/contato.html">Contato</a></li>
+    </ul>
+  </nav>
+  <div class="sidebar-bottom">
+    <div class="theme-selector">
+      <label for="theme-select" class="theme-label">Tema:</label>
+      <select id="theme-select" class="theme-select">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+        <option value="sephia">Sephia</option>
+      </select>
+    </div>
+    <div class="sidebar-social">
+      <a href="https://github.com/{{ site.github_username }}" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="mailto:{{ site.email }}" title="Email"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </div>
+</div>

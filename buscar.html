@@ -1,0 +1,68 @@
+---
+layout: page
+title: Buscar
+---
+
+<h1>Buscar</h1>
+<p>Selecione uma categoria ou digite uma palavra-chave para filtrar os posts:</p>
+
+<div class="search-filter">
+  <label for="keyword-input">Palavra-chave:</label>
+  <input type="text" id="keyword-input" class="keyword-input" placeholder="Digite uma palavra-chave">
+</div>
+
+<div class="category-filter">
+  <label for="category-select">Categoria:</label>
+  <select id="category-select" class="category-select">
+    <option value="all">Todas</option>
+    {% for category in site.categories %}
+      <option value="{{ category[0] | slugify }}">{{ category[0] }}</option>
+    {% endfor %}
+  </select>
+</div>
+
+<div class="posts-list">
+  {% for post in site.posts %}
+    <article class="post-preview" data-category="{{ post.categories | join: ' ' | slugify }}" data-title="{{ post.title | downcase }}">
+      <h2 class="post-title">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h2>
+      <p class="post-date">{{ post.date | date: "%A, %B %d, %Y" }}</p>
+      {% if post.image %}
+        <img class="post-cover" src="{{ post.image }}" alt="{{ post.title }}">
+      {% endif %}
+      <div class="post-excerpt">
+        {{ post.excerpt | strip_html | truncate: 220 }}
+      </div>
+      <a class="post-link" href="{{ post.url | relative_url }}">Leia mais</a>
+      <hr>
+    </article>
+  {% endfor %}
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const select = document.getElementById('category-select');
+    const input = document.getElementById('keyword-input');
+    const posts = document.querySelectorAll('.post-preview');
+
+    function filterPosts() {
+      const selectedCategory = select.value;
+      const keyword = input.value.toLowerCase();
+
+      posts.forEach(post => {
+        const matchesCategory = selectedCategory === 'all' || post.dataset.category.includes(selectedCategory);
+        const matchesKeyword = post.dataset.title.includes(keyword);
+
+        if (matchesCategory && matchesKeyword) {
+          post.style.display = 'block';
+        } else {
+          post.style.display = 'none';
+        }
+      });
+    }
+
+    select.addEventListener('change', filterPosts);
+    input.addEventListener('input', filterPosts);
+  });
+</script>

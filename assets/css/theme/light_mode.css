@@ -1,0 +1,66 @@
+body.light-mode {
+  --background-color: #fff;
+  --text-color: #222;
+  --menu-background-color: #fafafa;
+  --menu-text-color: #222;
+  --link-color: #b23a1d;
+  --link-hover-background: #d94f04;
+  --link-hover-color: #fff;
+}
+
+body.light-mode {
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+body.light-mode .main-content {
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+body.light-mode .sidebar {
+  background: var(--menu-background-color);
+  color: var(--menu-text-color);
+}
+
+body.light-mode .menu a {
+  color: var(--menu-text-color);
+}
+
+body.light-mode .menu a:hover {
+  background: #e0e0e0;
+}
+
+body.light-mode .sidebar-content.active {
+  background: var(--menu-background-color);
+  color: var(--menu-text-color);
+}
+body.light-mode .sidebar-profile .profile-desc {
+  color: #888;
+}
+body.light-mode .post-block {
+  background: #fff;
+  color: #222;
+}
+body.light-mode .post-link {
+  background: #fff;
+  color: #222;
+}
+body.light-mode .post-link:hover {
+  background: #444;
+}
+body.light-mode .sidebar-social a {
+  color: #888;
+}
+body.light-mode .sidebar-social a:hover {
+  color: #2a7ae2;
+}
+body.light-mode .post-title a {
+  color: #b23a1d;
+}
+body.light-mode .post-title a:hover {
+  color: #d94f04;
+}
+body.light-mode .theme-label {
+  color: #222;
+}

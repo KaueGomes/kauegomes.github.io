@@ -1,0 +1,70 @@
+body.dark-mode {
+  --background-color: #181818;
+  --text-color: #fafafa;
+  --menu-background-color: #1a1a1a;
+  --menu-text-color: #fff;
+  --link-color: #8ab4f8;
+  --link-hover-background: #8ab4f8;
+  --link-hover-color: #fff;
+}
+
+body.dark-mode .sidebar-content.active {
+  background: var(--menu-background-color);
+  color: var(--menu-text-color);
+}
+body.dark-mode .main-content {
+  background: #181818;
+  color: #fafafa;
+}
+body.dark-mode .sidebar {
+  background: #1a1a1a;
+  color: #fff;
+}
+body.dark-mode .menu a {
+  color: #fff;
+}
+body.dark-mode .menu a:hover {
+  background: #333;
+}
+body.dark-mode .sidebar-profile .profile-desc {
+  color: #bbb;
+}
+body.dark-mode .post-block {
+  background: #232323;
+  color: #fafafa;
+}
+body.dark-mode .post-link {
+  background: #333;
+  color: #fff;
+}
+body.dark-mode .post-link:hover {
+  background: #444;
+}
+body.dark-mode .sidebar-social a {
+  color: #bbb;
+}
+body.dark-mode .sidebar-social a:hover {
+  color: #8ab4f8;
+}
+body.dark-mode,
+body.dark-mode .main-content,
+body.dark-mode .sidebar,
+body.dark-mode .menu a,
+body.dark-mode .sidebar-profile .profile-desc,
+body.dark-mode .post-block,
+body.dark-mode .post-link,
+body.dark-mode .sidebar-social a,
+body.dark-mode .post-title,
+body.dark-mode .post-date,
+body.dark-mode .post-excerpt {
+  color: #fff !important;
+}
+body.dark-mode .post-title a {
+  color: #8ab4f8;
+}
+body.dark-mode .post-title a:hover {
+  color: #fff;
+}
+body.dark-mode .theme-label {
+  color: #fff;
+} 
