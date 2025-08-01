@@ -1,0 +1,181 @@
+{
+  "main": {
+    "id": "d093e5c6108e7267",
+    "type": "split",
+    "children": [
+      {
+        "id": "3705d3afeba60a07",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e1c220b4a3757847",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2025-07-26-welcome-to-jekyll.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2025-07-26-welcome-to-jekyll"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b7988f01de77a5dc",
+    "type": "split",
+    "children": [
+      {
+        "id": "4c0455919be1946c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c433f3b41be2edf9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "5fd03f7fd1ae1687",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "c7f8b800d21c6e34",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "71d854d0474a5c2d",
+    "type": "split",
+    "children": [
+      {
+        "id": "11bf33b569735bd5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2747b284db1a2789",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "teste.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Links inversos para teste"
+            }
+          },
+          {
+            "id": "04b9fbf3410d1fc5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "teste.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída para teste"
+            }
+          },
+          {
+            "id": "94c62f6e9ed5c699",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "e9825166bf99e6bf",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "teste.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário de teste"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false
+    }
+  },
+  "active": "e1c220b4a3757847",
+  "lastOpenFiles": [
+    "2025-07-26-welcome-to-jekyll.md",
+    "2025-07-31-Agora-Vai 3.md",
+    "2025-07-31-Agora-Vai.md",
+    "2025-07-26-welcome-to-jekyll2.md",
+    "2025-07-26-welcome-to-jekyll2.markdown",
+    "teste.md",
+    "teste.markdown"
+  ]
+}
