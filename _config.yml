@@ -21,7 +21,9 @@
 title: Kaue Gomes
 email: kauedellabarbagomes@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Meu blog pessoal
+  Programador amador, entusiasta de IA e Física, sobrevivente dos anos 2000, antigo usuário do MSN, telnet e gamer desde que o mundo era 2D.
+  Se você curte papos sobre tecnologia, ciência, filosofia de boteco e nostalgia gamer… seja bem-vindo à minha dungeon!
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://kauegomes.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  KaueGomes
