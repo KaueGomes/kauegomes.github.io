@@ -1,70 +1,97 @@
+﻿/* Dark mode — steel gray palette */
 body.dark-mode {
-  --background-color: #181818;
-  --text-color: #fafafa;
-  --menu-background-color: #1a1a1a;
-  --menu-text-color: #fff;
-  --link-color: #8ab4f8;
-  --link-hover-background: #8ab4f8;
-  --link-hover-color: #fff;
+  --background-color: #22272e;
+  --text-color: #e6edf3;
+  --menu-background-color: #2d333b;
+  --menu-text-color: #e6edf3;
+  --link-color: #9cc7ff;
+  --link-hover-background: #2f6feb;
+  --link-hover-color: #ffffff;
 }
 
+/* Surfaces */
 body.dark-mode .sidebar-content.active {
   background: var(--menu-background-color);
   color: var(--menu-text-color);
 }
 body.dark-mode .main-content {
-  background: #181818;
-  color: #fafafa;
+  background: var(--background-color);
+  color: var(--text-color);
 }
 body.dark-mode .sidebar {
-  background: #1a1a1a;
-  color: #fff;
+  background: var(--menu-background-color);
+  color: var(--menu-text-color);
 }
-body.dark-mode .menu a {
-  color: #fff;
+body.dark-mode .menu a { color: var(--menu-text-color); }
+body.dark-mode .menu a:hover { background: rgba(255,255,255,0.06); }
+body.dark-mode .sidebar-profile .profile-desc { color: var(--muted-text-color); }
+body.dark-mode .post-block { background: var(--surface-color); color: var(--text-color); }
+
+/* Buttons/links */
+body.dark-mode .post-link { background: var(--button-bg); color: var(--button-fg); }
+body.dark-mode .post-link:hover { background: var(--button-hover-bg); color: var(--button-hover-fg); }
+body.dark-mode .sidebar-social a { color: var(--muted-text-color); }
+body.dark-mode .sidebar-social a:hover { color: var(--link-color); }
+body.dark-mode .post-title a { color: var(--heading-link-color); }
+body.dark-mode .post-title a:hover { color: var(--heading-link-hover-color); }
+body.dark-mode .theme-label { color: var(--menu-text-color); }
+
+/* Variáveis para estilização de código */
+body.dark-mode {
+  --code-bg: #161b22;
+  --code-border: #30363d;
+  --code-text: #c9d1d9;
+  --code-inline-bg: #161b22;
 }
-body.dark-mode .menu a:hover {
-  background: #333;
+
+/* Variáveis de destaque de sintaxe */
+body.dark-mode {
+  --code-comment: #8b949e;
+  --code-keyword: #ff7b72;
+  --code-string: #a5d6ff;
+  --code-number: #7ee787;
+  --code-identifier: #d2a8ff;
+  --code-operator: #c9d1d9;
 }
-body.dark-mode .sidebar-profile .profile-desc {
-  color: #bbb;
+
+/* Variáveis do cabeçalho de código */
+body.dark-mode {
+  --code-header-bg: #161b22;
+  --code-header-text: #c9d1d9;
+  --code-header-border: #30363d;
+  --code-copy-bg: transparent;
 }
-body.dark-mode .post-block {
-  background: #232323;
-  color: #fafafa;
+
+/* UI extras usadas pelo main.css */
+body.dark-mode {
+  --avatar-border-color: #ffffff;
+  --avatar-placeholder-bg: #2c333a;
+  --menu-icon-bg: #30363d;
+  --menu-icon-fg: #c9d1d9;
+  --input-bg: #2d333b;
+  --input-border: #3d444c;
+  --input-text: #e6edf3;
+  --accent-color: #3b82f6;
+  --muted-text-color: #9aa4b2;
+  --tag-link-color: #9cc7ff;
+  --heading-link-color: #9cc7ff;
+  --heading-link-hover-color: #e6edf3;
+  --divider-color: #30363d;
+  --pagination-bg: #2b3138;
+  --overlay-backdrop: rgba(0,0,0,0.6);
+  --modal-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  --sidebar-shadow: 2px 0 8px rgba(0,0,0,0.4);
+  --code-copy-hover-bg: rgba(255,255,255,0.08);
+  --surface-color: #2b3138;
+  --button-bg: #2f6feb;
+  --button-fg: #ffffff;
+  --button-hover-bg: #3b82f6;
+  --button-hover-fg: #ffffff;
 }
-body.dark-mode .post-link {
-  background: #333;
-  color: #fff;
+
+body.dark-mode {
+  --code-diff-del-bg: rgba(255, 99, 132, 0.18);
+  --code-diff-add-bg: rgba(56, 142, 60, 0.22);
+  --code-error: #ff7b72;
 }
-body.dark-mode .post-link:hover {
-  background: #444;
-}
-body.dark-mode .sidebar-social a {
-  color: #bbb;
-}
-body.dark-mode .sidebar-social a:hover {
-  color: #8ab4f8;
-}
-body.dark-mode,
-body.dark-mode .main-content,
-body.dark-mode .sidebar,
-body.dark-mode .menu a,
-body.dark-mode .sidebar-profile .profile-desc,
-body.dark-mode .post-block,
-body.dark-mode .post-link,
-body.dark-mode .sidebar-social a,
-body.dark-mode .post-title,
-body.dark-mode .post-date,
-body.dark-mode .post-excerpt {
-  color: #fff !important;
-}
-body.dark-mode .post-title a {
-  color: #8ab4f8;
-}
-body.dark-mode .post-title a:hover {
-  color: #fff;
-}
-body.dark-mode .theme-label {
-  color: #fff;
-} 
+

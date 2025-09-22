@@ -1,24 +1,24 @@
 {
   "main": {
-    "id": "d093e5c6108e7267",
+    "id": "e4568fe3ab61134d",
     "type": "split",
     "children": [
       {
-        "id": "6856f3578513a592",
+        "id": "c2ae57189fbcd6f5",
         "type": "tabs",
         "children": [
           {
-            "id": "b5253f4e032735d7",
+            "id": "fc8c8f6e0413e232",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2025-07-26-welcome-to-jekyll.md",
+                "file": "_posts/2025-07-26-welcome-to-jekyll 1.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "2025-07-26-welcome-to-jekyll"
+              "title": "2025-07-26-welcome-to-jekyll 1"
             }
           }
         ]
@@ -27,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "b7988f01de77a5dc",
+    "id": "5112adcec23c1122",
     "type": "split",
     "children": [
       {
-        "id": "4c0455919be1946c",
+        "id": "073d262da7767a04",
         "type": "tabs",
         "children": [
           {
-            "id": "c433f3b41be2edf9",
+            "id": "fb18302a8446170b",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +48,7 @@
             }
           },
           {
-            "id": "5fd03f7fd1ae1687",
+            "id": "86766da2ec4af393",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +65,7 @@
             }
           },
           {
-            "id": "c7f8b800d21c6e34",
+            "id": "5b6b02d45d2f285e",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -81,20 +81,20 @@
     "width": 300
   },
   "right": {
-    "id": "71d854d0474a5c2d",
+    "id": "c88d31fb15436766",
     "type": "split",
     "children": [
       {
-        "id": "11bf33b569735bd5",
+        "id": "af3062514acc5076",
         "type": "tabs",
         "children": [
           {
-            "id": "2747b284db1a2789",
+            "id": "0d784f30dd34e845",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2025-07-26-welcome-to-jekyll.md",
+                "file": "_posts/2025-07-26-welcome-to-jekyll 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,25 +104,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Links inversos para 2025-07-26-welcome-to-jekyll"
+              "title": "Links inversos para 2025-07-26-welcome-to-jekyll 1"
             }
           },
           {
-            "id": "04b9fbf3410d1fc5",
+            "id": "8788a03a4c80287a",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "teste.md",
+                "file": "_posts/2025-07-26-welcome-to-jekyll 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Links de saída para teste"
+              "title": "Links de saída para 2025-07-26-welcome-to-jekyll 1"
             }
           },
           {
-            "id": "94c62f6e9ed5c699",
+            "id": "afe1575b8985d0d6",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -137,18 +137,18 @@
             }
           },
           {
-            "id": "e9825166bf99e6bf",
+            "id": "4bf12337487f0297",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "teste.md",
+                "file": "_posts/2025-07-26-welcome-to-jekyll 1.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Sumário de teste"
+              "title": "Sumário de 2025-07-26-welcome-to-jekyll 1"
             }
           }
         ]
@@ -160,26 +160,33 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:Criar nova base": false,
       "switcher:Abrir a troca rápida": false,
       "graph:Abrir visualização em gráfico": false,
       "canvas:Criar novo canvas": false,
       "daily-notes:Abrir a nota de hoje": false,
       "templates:Inserir modelo": false,
-      "command-palette:Abrir paleta de comandos": false
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Criar nova base": false
     }
   },
-  "active": "b5253f4e032735d7",
+  "active": "fc8c8f6e0413e232",
   "lastOpenFiles": [
-    "2025-07-26-welcome-to-jekyll copy 3.md",
-    "2025-07-26-welcome-to-jekyll copy 2.md",
-    "2025-07-26-welcome-to-jekyll copy.md",
-    "2025-07-26-welcome-to-jekyll.md",
-    "2025-07-31-Agora-Vai 3.md",
-    "2025-07-31-Agora-Vai.md",
-    "2025-07-26-welcome-to-jekyll2.md",
-    "2025-07-26-welcome-to-jekyll2.markdown",
-    "teste.md",
-    "teste.markdown"
+    "_site/tagueamento/rastreio/redes sociais/2025/09/17/welcome-to-jekyll-1.html",
+    "_site/tagueamento/rastreio/redes sociais/2025/09/17",
+    "_site/tagueamento/rastreio/redes sociais/2025/09",
+    "_site/tagueamento/rastreio/redes sociais/2025",
+    "_site/tagueamento/rastreio/redes sociais",
+    "_site/tagueamento/rastreio",
+    "_site/tagueamento",
+    "_site/2025/09/18/2025-07-26-welcome-to-jekyll-1.html",
+    "_site/2025/09/18",
+    "_site/2025/09",
+    "_site/2025",
+    "_site/assets/public/whatsapp_javascript/logo_whatsapp.png",
+    "assets/public/whatsapp_javascript/logo_whatsapp.png",
+    "_posts/2025-07-26-welcome-to-jekyll.md",
+    "_posts/2025-07-26-welcome-to-jekyll 1.md",
+    "_site/assets/public/logo_whatsapp.png",
+    "assets/public/logo_whatsapp.png"
   ]
 }

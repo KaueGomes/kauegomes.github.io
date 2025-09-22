@@ -1,79 +1,97 @@
+﻿/* Sepia mode — warm, readable palette */
 body.sephia-mode {
-  --background-color: #f4ecd8;
-  --text-color: #5b4636;
-  --menu-background-color: #5b4636;
-  --menu-text-color: #fff;
-  --link-color: #7c4f1d;
-  --link-hover-background: #5b4636;
-  --link-hover-color: #fff;
+  --background-color: #f7efe3;           /* base page background */
+  --text-color: #4e4336;                 /* dark warm gray for body text */
+  --menu-background-color: #efe4cf;      /* light sidebar/menu surface */
+  --menu-text-color: #4e4336;            /* text on menu surfaces */
+  --link-color: #8b5e34;                 /* warm link color */
+  --link-hover-background: #cfae7a;      /* used in pagination active/hover */
+  --link-hover-color: #ffffff;
 }
 
-body.sephia-mode {
-  background: var(--background-color);
-  color: var(--text-color);
+/* Surfaces */
+body.sephia-mode .sidebar-content.active {
+  background: var(--menu-background-color);
+  color: var(--menu-text-color);
 }
-
 body.sephia-mode .main-content {
   background: var(--background-color);
   color: var(--text-color);
 }
-
 body.sephia-mode .sidebar {
-  background: #e2cfa5;
-  color: var(--text-color);
-}
-
-body.sephia-mode .menu a {
-  color: var(--text-color);
-}
-
-body.sephia-mode .menu a:hover {
-  background: #d1bfa3;
-}
-
-body.sephia-mode .sidebar-profile .profile-desc {
-  color: #a68b6b;
-}
-
-body.sephia-mode .post-block {
-  background: #f8f3e6;
-  color: var(--text-color);
-}
-
-body.sephia-mode .post-excerpt {
-  color: var(--text-color);
-}
-
-body.sephia-mode .post-link {
-  background: #a68b6b;
-  color: #fff;
-}
-
-body.sephia-mode .post-link:hover {
-  background: #8b7355;
-}
-
-body.sephia-mode .sidebar-social a {
-  color: #a68b6b;
-}
-
-body.sephia-mode .sidebar-social a:hover {
-  color: var(--text-color);
-}
-
-body.sephia-mode .post-title a {
-  color: #7c4f1d;
-}
-
-body.sephia-mode .post-title a:hover {
-  color: var(--text-color);
-}
-
-body.sephia-mode .theme-label {
-  color: var(--text-color);
-}
-
-body.sephia-mode .sidebar-content.active {
-  background: #e2cfa5;
+  background: var(--menu-background-color);
   color: var(--menu-text-color);
 }
+body.sephia-mode .menu a { color: var(--menu-text-color); }
+body.sephia-mode .menu a:hover { background: rgba(0,0,0,0.06); }
+body.sephia-mode .sidebar-profile .profile-desc { color: var(--muted-text-color); }
+body.sephia-mode .post-block { background: var(--surface-color); color: var(--text-color); }
+
+/* Buttons/links */
+body.sephia-mode .post-link { background: var(--button-bg); color: var(--button-fg); }
+body.sephia-mode .post-link:hover { background: var(--button-hover-bg); color: var(--button-hover-fg); }
+body.sephia-mode .sidebar-social a { color: var(--muted-text-color); }
+body.sephia-mode .sidebar-social a:hover { color: var(--link-color); }
+body.sephia-mode .post-title a { color: var(--heading-link-color); }
+body.sephia-mode .post-title a:hover { color: var(--heading-link-hover-color); }
+body.sephia-mode .theme-label { color: var(--menu-text-color); }
+
+/* Code header variables (kept warm and soft) */
+body.sephia-mode {
+  --code-bg: #f3ead7;
+  --code-border: #d1bfa3;
+  --code-text: #5b4636;
+  --code-inline-bg: #f8f3e6;
+}
+
+/* Syntax token colors (can keep defaults or warm tint) */
+body.sephia-mode {
+  --code-comment: #8b7355;
+  --code-keyword: #9b4226;
+  --code-string: #7c4f1d;
+  --code-number: #356b3a;
+  --code-identifier: #6e4a7e;
+  --code-operator: #5b4636;
+}
+
+/* Code header look */
+body.sephia-mode {
+  --code-header-bg: #e9ddc7;
+  --code-header-text: #5b4636;
+  --code-header-border: #d1bfa3;
+  --code-copy-bg: transparent;
+}
+
+/* UI extras used by main.css */
+body.sephia-mode {
+  --avatar-border-color: #ffffff;
+  --avatar-placeholder-bg: #efe6d7;
+  --menu-icon-bg: #8b5e34;
+  --menu-icon-fg: #ffffff;
+  --input-bg: #f8f3e6;
+  --input-border: #d1bfa3;
+  --input-text: #4e4336;
+  --accent-color: #b8792a;               /* focus/active accents */
+  --muted-text-color: #8b7355;
+  --tag-link-color: #8b5e34;
+  --heading-link-color: #8b5e34;
+  --heading-link-hover-color: #5b4636;
+  --divider-color: #d8c9ae;
+  --pagination-bg: #efe3cf;
+  --overlay-backdrop: rgba(0,0,0,0.35);
+  --modal-shadow: 0 8px 24px rgba(0,0,0,0.14);
+  --sidebar-shadow: 2px 0 8px rgba(0,0,0,0.08);
+  --code-copy-hover-bg: rgba(0,0,0,0.06);
+  --surface-color: #fffaf0;
+  --button-bg: #b8792a;
+  --button-fg: #ffffff;
+  --button-hover-bg: #a86d26;
+  --button-hover-fg: #ffffff;
+}
+
+body.sephia-mode {
+  --code-diff-del-bg: rgba(155, 66, 38, 0.16);
+  --code-diff-add-bg: rgba(53, 107, 58, 0.16);
+  --code-error: #9b4226;
+}
+

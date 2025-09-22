@@ -1,0 +1,52 @@
+﻿/* Syntax highlighting driven by theme variables */
+.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight pre { margin: 5px; }
+
+/* Inline code */
+.highlighter-rouge,
+:not(pre) > code {
+  background-color: var(--code-inline-bg);
+  color: var(--code-text);
+}
+
+/* Block container colors */
+.highlight {
+  color: var(--code-text);
+  background-color: var(--code-bg);
+}
+
+/* Comments */
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf,
+.highlight .cm, .highlight .c1, .highlight .cp, .highlight .cs { color: var(--code-comment); }
+
+/* Keywords */
+.highlight .k, .highlight .kv, .highlight .kc, .highlight .kd, .highlight .kp,
+.highlight .kr, .highlight .kt, .highlight .kn { color: var(--code-keyword); font-weight: 600; }
+
+/* Operators */
+.highlight .o, .highlight .ow { color: var(--code-operator); }
+
+/* Numbers */
+.highlight .m, .highlight .mb, .highlight .mx, .highlight .mf, .highlight .mh,
+.highlight .il, .highlight .mi, .highlight .mo, .highlight .se { color: var(--code-number); }
+
+/* Strings */
+.highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl,
+.highlight .sd, .highlight .s2, .highlight .sh, .highlight .si, .highlight .sx,
+.highlight .sr, .highlight .s1, .highlight .ss { color: var(--code-string); }
+
+/* Identifiers / names */
+.highlight .na, .highlight .nc, .highlight .nd, .highlight .ne, .highlight .nf,
+.highlight .fm, .highlight .no, .highlight .bp, .highlight .nb, .highlight .ni,
+.highlight .nn, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .nv,
+.highlight .vm, .highlight .nl, .highlight .nt { color: var(--code-identifier); }
+
+/* Emphasis helpers */
+.highlight .ge { font-style: italic; }
+.highlight .gs { font-weight: 600; }
+
+/* Optional diff/error accents (theme may define variables) */
+.highlight .gd { background-color: var(--code-diff-del-bg, transparent); }
+.highlight .gi { background-color: var(--code-diff-add-bg, transparent); }
+.highlight .err { color: var(--code-error, inherit); }
