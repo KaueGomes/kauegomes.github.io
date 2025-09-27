@@ -18,7 +18,7 @@ Se você tem um site ou landing page, provavelmente já adicionou um botão para
 
 ## 2. Criando um link para o WhatsApp
 
-Um dos formatos mais comums encontrados é:
+Existem diversas urls que são utilizadas para fazer os links do whataspp funcionarem, as mais comuns são wa.me, web.whatsapp e api.whatsapp,  como no exemplo:
 
 {% highlight HTML %}
 <a href="https://wa.me/5511999999999" target="_blank">
@@ -26,7 +26,7 @@ Um dos formatos mais comums encontrados é:
 </a>
 {% endhighlight %}
 
-
+Essas tags normalmente são inseridas no sistema por um plugin ou um desenvolvedor, mas não é via de regra, elas podem vir com formatos distintos como um encurtador do bit.ly ou outras plataformas. A forma mais adequada de termos certeza é abrindo o "dev tool", a ferramenta que se utiliza em navegadores para inspecionar o código que foi colocado.
 
 {% highlight JavaScript %}
 document.querySelectorAll()

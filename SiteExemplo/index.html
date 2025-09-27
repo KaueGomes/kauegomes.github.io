@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luma Living | Loja Exemplo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <div class="brand">Luma Living</div>
+        <nav class="nav">
+          <a href="#produtos">Produtos</a>
+          <a href="#newsletter">Newsletter</a>
+          <a href="#contato">Contato</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <h1>Design minimalista e conforto para sua casa</h1>
+            <p>
+              Uma loja fictícia para demonstrar rastreamentos de cliques, envios de
+              formulários e visualizações de página.
+            </p>
+            <div class="hero__actions">
+              <a href="#produtos" class="btn btn-primary" data-track-id="ver-colecao">Ver coleção</a>
+              <a href="#newsletter" class="btn btn-outline" data-track-id="ir-newsletter">Assinar newsletter</a>
+            </div>
+          </div>
+          <div class="hero__image">
+            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1000&q=80" alt="Ambiente minimalista" />
+          </div>
+        </div>
+      </section>
+
+      <section id="produtos" class="produtos">
+        <div class="container">
+          <header class="sec__header">
+            <div>
+              <p class="eyebrow">Seleção curada</p>
+              <h2>Produtos em destaque</h2>
+            </div>
+          </header>
+
+          <div class="grid-produtos">
+            <article class="card-produto" data-product-id="cadeira-lua">
+              <img src="https://studiomacico.com.br/wp-content/uploads/2024/04/Cadeira-Lua-2-Unidades-Madeira-Macica-Frente.jpg" alt="Cadeira Lua" />
+              <h3>Cadeira Lua</h3>
+              <p class="price">R$ 1.290</p>
+              <button class="btn btn-primary add-to-cart" data-track-id="add-cadeira-lua">Adicionar ao carrinho</button>
+            </article>
+
+            <article class="card-produto" data-product-id="sofa-nevoa">
+              <img src="https://imgs.casasbahia.com.br/1572730697/1xg.jpg?imwidth=500" alt="Sofá Névoa" />
+              <h3>Sofá Névoa</h3>
+              <p class="price">R$ 3.590</p>
+              <button class="btn btn-primary add-to-cart" data-track-id="add-sofa-nevoa">Adicionar ao carrinho</button>
+            </article>
+
+            <article class="card-produto" data-product-id="luminaria-orion">
+              <img src="https://t44.com.br/cdn/shop/products/IMG_8336w.jpg?v=1573315419&width=1200" alt="Luminária Orion" />
+              <h3>Luminária Orion</h3>
+              <p class="price">R$ 690</p>
+              <button class="btn btn-primary add-to-cart" data-track-id="add-luminaria-orion">Adicionar ao carrinho</button>
+            </article>
+
+            <article class="card-produto" data-product-id="tapete-atlas">
+              <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80" alt="Tapete Atlas" />
+              <h3>Tapete Atlas</h3>
+              <p class="price">R$ 890</p>
+              <button class="btn btn-primary add-to-cart" data-track-id="add-tapete-atlas">Adicionar ao carrinho</button>
+            </article>
+
+            <article class="card-produto" data-product-id="mesa-brisa">
+              <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=800&q=80" alt="Mesa Brisa" />
+              <h3>Mesa Brisa</h3>
+              <p class="price">R$ 1.890</p>
+              <button class="btn btn-primary add-to-cart" data-track-id="add-mesa-brisa">Adicionar ao carrinho</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="newsletter" class="newsletter">
+        <div class="container newsletter__grid">
+          <div>
+            <p class="eyebrow">Fique por dentro</p>
+            <h2>Assine a Newsletter</h2>
+            <p>Receba novidades, conteúdos e cupons fictícios para testes de campanhas.</p>
+          </div>
+          <div class="newsletter__card">
+            <form data-newsletter-form data-track-id="formulario-newsletter">
+              <label for="nl-nome">Nome</label>
+              <input id="nl-nome" name="nome" type="text" placeholder="Maria Andrade" required />
+
+              <label for="nl-email">E-mail</label>
+              <input id="nl-email" name="email" type="email" placeholder="maria@exemplo.com" required />
+
+              <button class="btn btn-primary" type="submit" data-track-id="newsletter-enviar">Quero receber</button>
+            </form>
+            <p class="form-feedback" data-newsletter-feedback></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contato" class="footer">
+      <div class="container footer__grid">
+        <div>
+          <strong>Luma Living</strong>
+          <p>Atendimento fictício • contato@lumaliving.com</p>
+        </div>
+        <div>
+          <a href="tel:+551132223334" data-track-id="footer-telefone">(11) 3222-3334</a>
+        </div>
+        <div>
+            <a href="https://web.whatsapp/5511999999999" target="_blank" rel="noopener" data-track-id="footer-whatsapp">(11) 99999-9999 • WhatsApp</a> 
+        </div>
+      </div>
+      <p class="footer__note">Site demonstrativo para testes de rastreamento • 2024</p>
+    </footer>
+
+    <a
+      href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20preciso%20de%20ajuda"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener"
+      data-track-id="whatsapp-flutuante"
+      aria-label="Falar no WhatsApp"
+    >
+      WhatsApp
+    </a>
+  </body>
+  
+</html>
