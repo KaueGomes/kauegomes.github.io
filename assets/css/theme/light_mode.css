@@ -1,97 +1,74 @@
-﻿/* Light mode — soft gray palette */
+/* =========================
+   LIGHT MODE — inspirado em GitHub Light / Off-white
+   Fundo off-white (evita ofuscamento), texto quase-preto quente.
+   Contraste texto/fundo ≈ 13:1 (WCAG AAA).
+   ========================= */
 body.light-mode {
-  --background-color: #ffffff;
-  --text-color: #2b3137;
-  --menu-background-color: #f6f8fa;
-  --menu-text-color: #2b3137;
-  --link-color: #2f6feb;
-  --link-hover-background: #2f6feb;
+  /* Superfícies */
+  --background-color: #fbfaf7;
+  --surface-color: #ffffff;
+  --menu-background-color: #f2f1ec;
+  --menu-hover-bg: rgba(15, 23, 42, 0.06);
+  --menu-hover-fg: #0f172a;
+
+  /* Texto */
+  --text-color: #1f2328;
+  --heading-color: #0f172a;
+  --menu-text-color: #1f2328;
+  --muted-text-color: #5c6370;
+  --brand-color: #0f172a;
+
+  /* Links & acentos */
+  --link-color: #1f6feb;
   --link-hover-color: #ffffff;
-}
+  --link-hover-color-text: #0550ae;
+  --link-hover-background: #1f6feb;
+  --accent-color: #1f6feb;
+  --heading-link-color: #1f6feb;
+  --heading-link-hover-color: #0550ae;
+  --tag-link-color: #1f6feb;
 
-/* Surfaces */
-body.light-mode .sidebar-content.active {
-  background: var(--menu-background-color);
-  color: var(--menu-text-color);
-}
-body.light-mode .main-content {
-  background: var(--background-color);
-  color: var(--text-color);
-}
-body.light-mode .sidebar {
-  background: var(--menu-background-color);
-  color: var(--menu-text-color);
-}
-body.light-mode .menu a { color: var(--menu-text-color); }
-body.light-mode .menu a:hover { background: rgba(0,0,0,0.06); }
-body.light-mode .sidebar-profile .profile-desc { color: var(--muted-text-color); }
-body.light-mode .post-block { background: var(--surface-color); color: var(--text-color); }
+  /* Bordas e divisores */
+  --divider-color: #d8dadf;
+  --input-bg: #ffffff;
+  --input-border: #d0d7de;
+  --input-text: #1f2328;
 
-/* Buttons/links */
-body.light-mode .post-link { background: var(--button-bg); color: var(--button-fg); }
-body.light-mode .post-link:hover { background: var(--button-hover-bg); color: var(--button-hover-fg); }
-body.light-mode .sidebar-social a { color: var(--muted-text-color); }
-body.light-mode .sidebar-social a:hover { color: var(--link-color); }
-body.light-mode .post-title a { color: var(--heading-link-color); }
-body.light-mode .post-title a:hover { color: var(--heading-link-hover-color); }
-body.light-mode .theme-label { color: var(--menu-text-color); }
+  /* Botões */
+  --button-bg: #1f6feb;
+  --button-fg: #ffffff;
+  --button-hover-bg: #0550ae;
+  --button-hover-fg: #ffffff;
 
-/* Variáveis para estilização de código */
-body.light-mode {
+  /* Paginação */
+  --pagination-bg: #ebeae4;
+
+  /* Sidebar / icon menu */
+  --menu-icon-bg: #1f6feb;
+  --menu-icon-fg: #ffffff;
+  --sidebar-shadow: 1px 0 4px rgba(15, 23, 42, 0.06);
+  --overlay-backdrop: rgba(15, 23, 42, 0.35);
+  --modal-shadow: 0 8px 24px rgba(15, 23, 42, 0.14);
+
+  /* Código */
   --code-bg: #f6f8fa;
+  --code-inline-bg: #eef0f3;
   --code-border: #d0d7de;
-  --code-text: #24292f;
-  --code-inline-bg: #f6f8fa;
-}
+  --code-text: #1f2328;
+  --code-header-bg: #ebeef2;
+  --code-header-text: #1f2328;
+  --code-header-border: #d0d7de;
+  --code-copy-bg: transparent;
+  --code-copy-hover-bg: rgba(15, 23, 42, 0.06);
 
-/* Variáveis de destaque de sintaxe */
-body.light-mode {
+  /* Sintaxe */
   --code-comment: #6e7781;
   --code-keyword: #cf222e;
   --code-string: #0a3069;
   --code-number: #0550ae;
   --code-identifier: #6f42c1;
-  --code-operator: #1f2328;
-}
-
-/* Variáveis do cabeçalho de código */
-body.light-mode {
-  --code-header-bg: #f0f1f3;
-  --code-header-text: #24292f;
-  --code-header-border: #d0d7de;
-  --code-copy-bg: transparent;
-}
-
-/* UI extras usadas pelo main.css */
-body.light-mode {
-  --avatar-border-color: #ffffff;
-  --avatar-placeholder-bg: #f0f0f0;
-  --menu-icon-bg: #2f6feb;
-  --menu-icon-fg: #ffffff;
-  --input-bg: #ffffff;
-  --input-border: #d0d7de;
-  --input-text: #2b3137;
-  --accent-color: #3b82f6;
-  --muted-text-color: #6e7781;
-  --tag-link-color: #2f6feb;
-  --heading-link-color: #2f6feb;
-  --heading-link-hover-color: #1e40af;
-  --divider-color: #d0d7de;
-  --pagination-bg: #eef2f7;
-  --overlay-backdrop: rgba(0,0,0,0.35);
-  --modal-shadow: 0 8px 24px rgba(0,0,0,0.14);
-  --sidebar-shadow: 2px 0 8px rgba(0,0,0,0.08);
-  --code-copy-hover-bg: rgba(0,0,0,0.06);
-  --surface-color: #ffffff;
-  --button-bg: #2f6feb;
-  --button-fg: #ffffff;
-  --button-hover-bg: #3b82f6;
-  --button-hover-fg: #ffffff;
-}
-
-body.light-mode {
-  --code-diff-del-bg: rgba(200, 60, 60, 0.14);
-  --code-diff-add-bg: rgba(46, 160, 67, 0.14);
+  --code-operator: #24292f;
+  --code-diff-del-bg: rgba(207, 34, 46, 0.12);
+  --code-diff-add-bg: rgba(46, 160, 67, 0.12);
   --code-error: #b42318;
 }
-

@@ -1,97 +1,74 @@
-﻿/* Sepia mode — warm, readable palette */
+/* =========================
+   SÉPIA MODE — inspirado em Instapaper / e-ink papel envelhecido
+   Tons quentes, livro antigo. Evita amarelo saturado.
+   Contraste texto/fundo ≈ 9:1 (WCAG AAA).
+   ========================= */
 body.sephia-mode {
-  --background-color: #f7efe3;           /* base page background */
-  --text-color: #4e4336;                 /* dark warm gray for body text */
-  --menu-background-color: #efe4cf;      /* light sidebar/menu surface */
-  --menu-text-color: #4e4336;            /* text on menu surfaces */
-  --link-color: #8b5e34;                 /* warm link color */
-  --link-hover-background: #cfae7a;      /* used in pagination active/hover */
-  --link-hover-color: #ffffff;
-}
+  /* Superfícies */
+  --background-color: #f4ecd8;
+  --surface-color: #faf4e1;
+  --menu-background-color: #ece1c4;
+  --menu-hover-bg: rgba(93, 64, 37, 0.08);
+  --menu-hover-fg: #3d2f1d;
 
-/* Surfaces */
-body.sephia-mode .sidebar-content.active {
-  background: var(--menu-background-color);
-  color: var(--menu-text-color);
-}
-body.sephia-mode .main-content {
-  background: var(--background-color);
-  color: var(--text-color);
-}
-body.sephia-mode .sidebar {
-  background: var(--menu-background-color);
-  color: var(--menu-text-color);
-}
-body.sephia-mode .menu a { color: var(--menu-text-color); }
-body.sephia-mode .menu a:hover { background: rgba(0,0,0,0.06); }
-body.sephia-mode .sidebar-profile .profile-desc { color: var(--muted-text-color); }
-body.sephia-mode .post-block { background: var(--surface-color); color: var(--text-color); }
+  /* Texto */
+  --text-color: #433322;
+  --heading-color: #2d2013;
+  --menu-text-color: #433322;
+  --muted-text-color: #8a755a;
+  --brand-color: #3d2f1d;
 
-/* Buttons/links */
-body.sephia-mode .post-link { background: var(--button-bg); color: var(--button-fg); }
-body.sephia-mode .post-link:hover { background: var(--button-hover-bg); color: var(--button-hover-fg); }
-body.sephia-mode .sidebar-social a { color: var(--muted-text-color); }
-body.sephia-mode .sidebar-social a:hover { color: var(--link-color); }
-body.sephia-mode .post-title a { color: var(--heading-link-color); }
-body.sephia-mode .post-title a:hover { color: var(--heading-link-hover-color); }
-body.sephia-mode .theme-label { color: var(--menu-text-color); }
+  /* Links & acentos */
+  --link-color: #8a5a2b;
+  --link-hover-color: #faf4e1;
+  --link-hover-color-text: #5e3a18;
+  --link-hover-background: #8a5a2b;
+  --accent-color: #a86a2a;
+  --heading-link-color: #8a5a2b;
+  --heading-link-hover-color: #5e3a18;
+  --tag-link-color: #8a5a2b;
 
-/* Code header variables (kept warm and soft) */
-body.sephia-mode {
-  --code-bg: #f3ead7;
-  --code-border: #d1bfa3;
-  --code-text: #5b4636;
-  --code-inline-bg: #f8f3e6;
-}
+  /* Bordas e divisores */
+  --divider-color: #d7c8a8;
+  --input-bg: #faf4e1;
+  --input-border: #c9b98f;
+  --input-text: #433322;
 
-/* Syntax token colors (can keep defaults or warm tint) */
-body.sephia-mode {
-  --code-comment: #8b7355;
-  --code-keyword: #9b4226;
-  --code-string: #7c4f1d;
-  --code-number: #356b3a;
-  --code-identifier: #6e4a7e;
-  --code-operator: #5b4636;
-}
+  /* Botões */
+  --button-bg: #a86a2a;
+  --button-fg: #faf4e1;
+  --button-hover-bg: #8a5a2b;
+  --button-hover-fg: #faf4e1;
 
-/* Code header look */
-body.sephia-mode {
-  --code-header-bg: #e9ddc7;
-  --code-header-text: #5b4636;
-  --code-header-border: #d1bfa3;
+  /* Paginação */
+  --pagination-bg: #e4d7b6;
+
+  /* Sidebar / icon menu */
+  --menu-icon-bg: #8a5a2b;
+  --menu-icon-fg: #faf4e1;
+  --sidebar-shadow: 1px 0 4px rgba(93, 64, 37, 0.15);
+  --overlay-backdrop: rgba(93, 64, 37, 0.40);
+  --modal-shadow: 0 8px 24px rgba(93, 64, 37, 0.20);
+
+  /* Código */
+  --code-bg: #ede2c6;
+  --code-inline-bg: #eadfbe;
+  --code-border: #d7c8a8;
+  --code-text: #3d2f1d;
+  --code-header-bg: #e0d2af;
+  --code-header-text: #3d2f1d;
+  --code-header-border: #d7c8a8;
   --code-copy-bg: transparent;
-}
+  --code-copy-hover-bg: rgba(93, 64, 37, 0.08);
 
-/* UI extras used by main.css */
-body.sephia-mode {
-  --avatar-border-color: #ffffff;
-  --avatar-placeholder-bg: #efe6d7;
-  --menu-icon-bg: #8b5e34;
-  --menu-icon-fg: #ffffff;
-  --input-bg: #f8f3e6;
-  --input-border: #d1bfa3;
-  --input-text: #4e4336;
-  --accent-color: #b8792a;               /* focus/active accents */
-  --muted-text-color: #8b7355;
-  --tag-link-color: #8b5e34;
-  --heading-link-color: #8b5e34;
-  --heading-link-hover-color: #5b4636;
-  --divider-color: #d8c9ae;
-  --pagination-bg: #efe3cf;
-  --overlay-backdrop: rgba(0,0,0,0.35);
-  --modal-shadow: 0 8px 24px rgba(0,0,0,0.14);
-  --sidebar-shadow: 2px 0 8px rgba(0,0,0,0.08);
-  --code-copy-hover-bg: rgba(0,0,0,0.06);
-  --surface-color: #fffaf0;
-  --button-bg: #b8792a;
-  --button-fg: #ffffff;
-  --button-hover-bg: #a86d26;
-  --button-hover-fg: #ffffff;
-}
-
-body.sephia-mode {
-  --code-diff-del-bg: rgba(155, 66, 38, 0.16);
-  --code-diff-add-bg: rgba(53, 107, 58, 0.16);
+  /* Sintaxe */
+  --code-comment: #8a755a;
+  --code-keyword: #9b4226;
+  --code-string: #6d4b1f;
+  --code-number: #3e6b33;
+  --code-identifier: #6e4a7e;
+  --code-operator: #3d2f1d;
+  --code-diff-del-bg: rgba(155, 66, 38, 0.15);
+  --code-diff-add-bg: rgba(62, 107, 51, 0.15);
   --code-error: #9b4226;
 }
-

@@ -1,0 +1,96 @@
+---
+layout: default
+---
+<div class="content-wrap">
+  <div class="page-wrap" style="max-width: 1100px; margin-bottom: 1.5em;">
+    <h1 class="page-title">{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="page-subtitle">{{ page.subtitle }}</p>{% endif %}
+  </div>
+
+  {% assign cat_slug = page.category %}
+  {% assign cat_posts = "" | split: "" %}
+  {% for post in site.posts %}
+    {% assign match = false %}
+    {% for c in post.categories %}
+      {% assign cs = c | slugify %}
+      {% if cs == cat_slug %}{% assign match = true %}{% endif %}
+    {% endfor %}
+    {% if match %}
+      {% assign cat_posts = cat_posts | push: post %}
+    {% endif %}
+  {% endfor %}
+
+  {% if cat_posts.size == 0 %}
+    <p class="search-empty">Ainda sem posts nesta categoria. Em breve, novos experimentos por aqui.</p>
+  {% else %}
+    <div class="posts-grid" id="category-posts" data-page-size="9">
+      {% for post in cat_posts %}
+        <article class="post-card">
+          {% if post.image %}
+            <a class="post-card-img-link" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">
+              <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
+            </a>
+          {% else %}
+            <a class="post-card-img-link post-card-img-placeholder" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">
+              <i class="fa-solid fa-pen-nib" aria-hidden="true"></i>
+            </a>
+          {% endif %}
+          <div class="post-card-body">
+            {% if post.categories and post.categories.size > 0 %}
+              <span class="post-card-category">{{ post.categories | first }}</span>
+            {% endif %}
+            <h2 class="post-card-title">
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </h2>
+            <p class="post-card-meta">
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d/%m/%Y" }}</time>
+            </p>
+            <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 140 }}</p>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+    <nav class="pagination" id="category-pagination" aria-label="Paginação"></nav>
+  {% endif %}
+</div>
+
+<script>
+  (function paginateList() {
+    var list = document.getElementById('category-posts');
+    var nav  = document.getElementById('category-pagination');
+    if (!list || !nav) return;
+    var size = parseInt(list.dataset.pageSize || '9', 10);
+    var items = Array.prototype.slice.call(list.querySelectorAll('.post-card'));
+    if (items.length <= size) return;
+    var pages = Math.ceil(items.length / size);
+    var current = 1;
+
+    function render() {
+      items.forEach(function (el, i) {
+        var pageOfItem = Math.floor(i / size) + 1;
+        el.style.display = pageOfItem === current ? '' : 'none';
+      });
+      nav.innerHTML = '';
+      var prev = document.createElement('button');
+      prev.textContent = '« Anterior';
+      prev.disabled = current === 1;
+      prev.addEventListener('click', function () { current--; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+      nav.appendChild(prev);
+      for (var p = 1; p <= pages; p++) {
+        (function (n) {
+          var b = document.createElement('button');
+          b.textContent = n;
+          if (n === current) b.classList.add('active');
+          b.addEventListener('click', function () { current = n; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+          nav.appendChild(b);
+        })(p);
+      }
+      var next = document.createElement('button');
+      next.textContent = 'Próxima »';
+      next.disabled = current === pages;
+      next.addEventListener('click', function () { current++; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+      nav.appendChild(next);
+    }
+    render();
+  })();
+</script>

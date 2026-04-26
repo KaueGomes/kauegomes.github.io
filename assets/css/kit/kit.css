@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* =========================
+   KIT MACGYVER — layout app, sem sidebar
+   Herda as variáveis CSS dos três temas (light/dark/sephia).
+   ========================= */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: var(--background-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Header */
+.kit-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 1.5em;
+  background: var(--menu-background-color);
+  border-bottom: 1px solid var(--divider-color);
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.kit-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-weight: 700;
+  font-size: 1.05em;
+  color: var(--brand-color, var(--text-color));
+  text-decoration: none;
+}
+
+.kit-home i { color: var(--accent-color); }
+
+.kit-nav {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.kit-nav a {
+  color: var(--muted-text-color);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.kit-nav a:hover { color: var(--accent-color); }
+
+.theme-selector {
+  display: flex; align-items: center; gap: 0.4em;
+}
+
+.theme-label { font-size: 0.85em; color: var(--muted-text-color); font-weight: 500; }
+
+.theme-select {
+  padding: 0.3em 0.6em;
+  border-radius: 6px;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--input-text);
+  font-weight: 500;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+/* Main */
+.kit-main {
+  flex: 1 1 auto;
+  padding: 2.5em 1.5em;
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.kit-main h1 {
+  font-size: 2em;
+  margin: 0 0 0.3em 0;
+  color: var(--heading-color, var(--text-color));
+  font-family: 'Merriweather', Georgia, serif;
+}
+
+.kit-main .subtitle {
+  color: var(--muted-text-color);
+  margin: 0 0 2em 0;
+  font-size: 1.05em;
+}
+
+/* Grid de ferramentas */
+.kit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1em;
+}
+
+.kit-card {
+  background: var(--surface-color);
+  border: 1px solid var(--divider-color);
+  border-radius: 10px;
+  padding: 1.2em 1.3em;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.kit-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-color);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.kit-card .kit-icon {
+  font-size: 1.6em;
+  color: var(--accent-color);
+}
+
+.kit-card h3 {
+  margin: 0;
+  font-size: 1.15em;
+  font-family: 'Merriweather', Georgia, serif;
+  color: var(--heading-color, var(--text-color));
+}
+
+.kit-card p {
+  margin: 0;
+  color: var(--muted-text-color);
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+.kit-card .kit-badge {
+  display: inline-block;
+  margin-top: 0.4em;
+  font-size: 0.75em;
+  padding: 0.15em 0.6em;
+  border-radius: 999px;
+  background: var(--pagination-bg);
+  color: var(--muted-text-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  align-self: flex-start;
+}
+
+.kit-card .kit-badge.ready  { background: var(--accent-color); color: #fff; }
+.kit-card .kit-badge.soon   { background: var(--pagination-bg); color: var(--muted-text-color); }
+
+/* Footer */
+.kit-footer {
+  padding: 1.5em;
+  text-align: center;
+  color: var(--muted-text-color);
+  border-top: 1px solid var(--divider-color);
+  font-size: 0.85em;
+}
+
+/* =========================
+   APP — layout de ferramenta individual
+   ========================= */
+.tool-shell {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.tool-shell .back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  color: var(--muted-text-color);
+  text-decoration: none;
+  font-size: 0.92em;
+  margin-bottom: 1em;
+}
+
+.tool-shell .back-link:hover { color: var(--accent-color); }
+
+.tool-card {
+  background: var(--surface-color);
+  border: 1px solid var(--divider-color);
+  border-radius: 10px;
+  padding: 1.8em;
+}
+
+.tool-card .form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  margin-bottom: 1.2em;
+}
+
+.tool-card label {
+  font-weight: 600;
+  font-size: 0.95em;
+  color: var(--text-color);
+}
+
+.tool-card .help {
+  font-size: 0.85em;
+  color: var(--muted-text-color);
+  margin: 0.1em 0 0 0;
+}
+
+.tool-card input[type="text"],
+.tool-card input[type="number"],
+.tool-card input[type="tel"],
+.tool-card textarea,
+.tool-card select {
+  padding: 0.6em 0.8em;
+  border-radius: 6px;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--input-text);
+  font-size: 1em;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.tool-card input:focus,
+.tool-card textarea:focus,
+.tool-card select:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.tool-card textarea { min-height: 90px; resize: vertical; }
+
+.btn-row { display: flex; gap: 0.5em; flex-wrap: wrap; }
+
+.btn {
+  padding: 0.65em 1.2em;
+  border-radius: 6px;
+  border: none;
+  background: var(--button-bg);
+  color: var(--button-fg);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 0.95em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.btn:hover { background: var(--button-hover-bg); color: var(--button-hover-fg); }
+
+.btn-secondary {
+  background: var(--pagination-bg);
+  color: var(--text-color);
+}
+
+.btn-secondary:hover { background: var(--divider-color); color: var(--text-color); }
+
+.output-box {
+  margin-top: 1.5em;
+  padding: 1em;
+  border-radius: 8px;
+  border: 1px dashed var(--divider-color);
+  background: var(--code-bg);
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.92em;
+  color: var(--code-text);
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+
+.output-box .label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: var(--muted-text-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.4em;
+  display: block;
+}
+
+.preview-btn-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.8em 1.3em;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1em;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.preview-wrap {
+  margin-top: 1em;
+  padding: 1em;
+  text-align: center;
+  border-radius: 8px;
+  background: var(--menu-background-color);
+  border: 1px solid var(--divider-color);
+}
+
+.copy-feedback {
+  color: var(--accent-color);
+  font-size: 0.85em;
+  font-weight: 600;
+  margin-left: 0.5em;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.copy-feedback.show { opacity: 1; }
+
+.coming-soon {
+  text-align: center;
+  padding: 2em 1em;
+  color: var(--muted-text-color);
+}
+
+.coming-soon i { font-size: 2.5em; color: var(--accent-color); margin-bottom: 0.5em; }

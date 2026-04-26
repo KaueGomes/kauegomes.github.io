@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'pt-BR' }}">
+  <head>
+    <meta charset="UTF-8">
+    <title>{% if page.title %}{{ page.title }} — Kit MacGyver{% else %}Kit MacGyver{% endif %} — {{ site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ page.description | default: 'Ferramentas simples do Kit MacGyver — pequenas soluções que rodam direto no navegador.' }}">
+    <link rel="icon" href="{{ '/assets/img/Favicon.ico' | relative_url }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ '/assets/css/theme/light_mode.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/theme/dark_mode.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/theme/sephia_mode.css' | relative_url }}">
+    <!-- main.css traz Font Awesome, DM Sans e os estilos do header/hambúrguer -->
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <!-- kit.css traz os estilos específicos das ferramentas -->
+    <link rel="stylesheet" href="{{ '/assets/css/kit/kit.css' | relative_url }}">
+  </head>
+  <body>
+    <header class="site-header">
+      {% include menu.html %}
+    </header>
+
+    <main class="kit-main">
+      {{ content }}
+    </main>
+
+    <footer class="kit-footer">
+      <small>Kit MacGyver · {{ site.title }} · Pequenas ferramentas, direto no navegador.</small>
+    </footer>
+
+    <!-- main.js gerencia tema (light/dark/sépia) e menu hambúrguer -->
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  </body>
+</html>

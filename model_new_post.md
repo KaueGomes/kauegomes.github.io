@@ -1,9 +1,19 @@
 ---
 layout: post
-title:  "Hello World!"
-date:   2025-07-26 23:14:56 -0300
-categories: name
-image: /assets/img/profile.png
+title: "Título do Post"
+date: 2026-01-01 12:00:00 -0300
+categories: [the-office]   # opções: holodeck, crafting-table, the-office, cabo-interdimensional
+image: /assets/public/pasta-do-post/capa.png
+tags: [tag1, tag2, tag3]
+description: Resumo curto de até 180 caracteres para SEO e busca.
 ---
 
-First time writing a test, hope it appears on main page
+Conteúdo do post aqui.
+
+## Seção
+
+Parágrafo normal.
+
+{% highlight JavaScript %}
+console.log('bloco de código');
+{% endhighlight %}

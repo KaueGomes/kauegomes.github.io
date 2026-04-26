@@ -1,97 +1,74 @@
-﻿/* Dark mode — steel gray palette */
+/* =========================
+   DARK MODE — inspirado em GitHub Dark Dimmed
+   Fundo azulado escuro (NÃO preto puro) para reduzir fadiga visual.
+   Contraste texto/fundo ≈ 10:1 (WCAG AAA).
+   ========================= */
 body.dark-mode {
-  --background-color: #22272e;
-  --text-color: #e6edf3;
+  /* Superfícies */
+  --background-color: #1c2128;
+  --surface-color: #22272e;
   --menu-background-color: #2d333b;
-  --menu-text-color: #e6edf3;
-  --link-color: #9cc7ff;
-  --link-hover-background: #2f6feb;
-  --link-hover-color: #ffffff;
-}
+  --menu-hover-bg: rgba(255, 255, 255, 0.08);
+  --menu-hover-fg: #f0f6fc;
 
-/* Surfaces */
-body.dark-mode .sidebar-content.active {
-  background: var(--menu-background-color);
-  color: var(--menu-text-color);
-}
-body.dark-mode .main-content {
-  background: var(--background-color);
-  color: var(--text-color);
-}
-body.dark-mode .sidebar {
-  background: var(--menu-background-color);
-  color: var(--menu-text-color);
-}
-body.dark-mode .menu a { color: var(--menu-text-color); }
-body.dark-mode .menu a:hover { background: rgba(255,255,255,0.06); }
-body.dark-mode .sidebar-profile .profile-desc { color: var(--muted-text-color); }
-body.dark-mode .post-block { background: var(--surface-color); color: var(--text-color); }
+  /* Texto */
+  --text-color: #cdd9e5;
+  --heading-color: #f0f6fc;
+  --menu-text-color: #cdd9e5;
+  --muted-text-color: #909dab;
+  --brand-color: #f0f6fc;
 
-/* Buttons/links */
-body.dark-mode .post-link { background: var(--button-bg); color: var(--button-fg); }
-body.dark-mode .post-link:hover { background: var(--button-hover-bg); color: var(--button-hover-fg); }
-body.dark-mode .sidebar-social a { color: var(--muted-text-color); }
-body.dark-mode .sidebar-social a:hover { color: var(--link-color); }
-body.dark-mode .post-title a { color: var(--heading-link-color); }
-body.dark-mode .post-title a:hover { color: var(--heading-link-hover-color); }
-body.dark-mode .theme-label { color: var(--menu-text-color); }
+  /* Links & acentos */
+  --link-color: #6cb6ff;
+  --link-hover-color: #1c2128;
+  --link-hover-color-text: #9cc7ff;
+  --link-hover-background: #6cb6ff;
+  --accent-color: #6cb6ff;
+  --heading-link-color: #6cb6ff;
+  --heading-link-hover-color: #f0f6fc;
+  --tag-link-color: #6cb6ff;
 
-/* Variáveis para estilização de código */
-body.dark-mode {
-  --code-bg: #161b22;
-  --code-border: #30363d;
-  --code-text: #c9d1d9;
-  --code-inline-bg: #161b22;
-}
+  /* Bordas e divisores */
+  --divider-color: #373e47;
+  --input-bg: #22272e;
+  --input-border: #444c56;
+  --input-text: #cdd9e5;
 
-/* Variáveis de destaque de sintaxe */
-body.dark-mode {
-  --code-comment: #8b949e;
-  --code-keyword: #ff7b72;
-  --code-string: #a5d6ff;
-  --code-number: #7ee787;
-  --code-identifier: #d2a8ff;
-  --code-operator: #c9d1d9;
-}
-
-/* Variáveis do cabeçalho de código */
-body.dark-mode {
-  --code-header-bg: #161b22;
-  --code-header-text: #c9d1d9;
-  --code-header-border: #30363d;
-  --code-copy-bg: transparent;
-}
-
-/* UI extras usadas pelo main.css */
-body.dark-mode {
-  --avatar-border-color: #ffffff;
-  --avatar-placeholder-bg: #2c333a;
-  --menu-icon-bg: #30363d;
-  --menu-icon-fg: #c9d1d9;
-  --input-bg: #2d333b;
-  --input-border: #3d444c;
-  --input-text: #e6edf3;
-  --accent-color: #3b82f6;
-  --muted-text-color: #9aa4b2;
-  --tag-link-color: #9cc7ff;
-  --heading-link-color: #9cc7ff;
-  --heading-link-hover-color: #e6edf3;
-  --divider-color: #30363d;
-  --pagination-bg: #2b3138;
-  --overlay-backdrop: rgba(0,0,0,0.6);
-  --modal-shadow: 0 8px 24px rgba(0,0,0,0.5);
-  --sidebar-shadow: 2px 0 8px rgba(0,0,0,0.4);
-  --code-copy-hover-bg: rgba(255,255,255,0.08);
-  --surface-color: #2b3138;
-  --button-bg: #2f6feb;
+  /* Botões */
+  --button-bg: #316dca;
   --button-fg: #ffffff;
-  --button-hover-bg: #3b82f6;
+  --button-hover-bg: #4184e4;
   --button-hover-fg: #ffffff;
-}
 
-body.dark-mode {
-  --code-diff-del-bg: rgba(255, 99, 132, 0.18);
-  --code-diff-add-bg: rgba(56, 142, 60, 0.22);
-  --code-error: #ff7b72;
-}
+  /* Paginação */
+  --pagination-bg: #2d333b;
 
+  /* Sidebar / icon menu */
+  --menu-icon-bg: #316dca;
+  --menu-icon-fg: #ffffff;
+  --sidebar-shadow: 1px 0 4px rgba(0, 0, 0, 0.45);
+  --overlay-backdrop: rgba(0, 0, 0, 0.62);
+  --modal-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+
+  /* Código */
+  --code-bg: #161b22;
+  --code-inline-bg: #22272e;
+  --code-border: #373e47;
+  --code-text: #cdd9e5;
+  --code-header-bg: #22272e;
+  --code-header-text: #cdd9e5;
+  --code-header-border: #373e47;
+  --code-copy-bg: transparent;
+  --code-copy-hover-bg: rgba(255, 255, 255, 0.08);
+
+  /* Sintaxe */
+  --code-comment: #768390;
+  --code-keyword: #f47067;
+  --code-string: #96d0ff;
+  --code-number: #6cb6ff;
+  --code-identifier: #dcbdfb;
+  --code-operator: #cdd9e5;
+  --code-diff-del-bg: rgba(244, 112, 103, 0.15);
+  --code-diff-add-bg: rgba(87, 171, 90, 0.18);
+  --code-error: #f47067;
+}

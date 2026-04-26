@@ -1,41 +1,53 @@
 ---
 layout: default
 title: Início
+description: Garagem C-137 — a dungeon digital de tecnologia, cultura pop e construção.
 ---
 
-<div class="posts-list">
-  {% for post in paginator.posts %}
-    <article class="post-preview">
-      <h2 class="post-title">
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      </h2>
-      <p class="post-date">{{ post.date | date: "%d/%m/%Y %H:%M" }}</p>
-      {% if post.image %}
-        <img class="post-cover" src="{{ post.image }}" alt="{{ post.title }}">
-      {% endif %}
-      <div class="post-excerpt">
-        {{ post.excerpt | strip_html | truncate: 220 }}
-      </div>
-      <a class="post-link" href="{{ post.url | relative_url }}">Leia mais</a>
-      <hr>
-    </article>
-  {% endfor %}
-</div>
+<div class="content-wrap">
+  <div class="posts-grid">
+    {% for post in paginator.posts %}
+      <article class="post-card">
+        {% if post.image %}
+          <a class="post-card-img-link" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">
+            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
+          </a>
+        {% else %}
+          <a class="post-card-img-link post-card-img-placeholder" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">
+            <i class="fa-solid fa-pen-nib" aria-hidden="true"></i>
+          </a>
+        {% endif %}
+        <div class="post-card-body">
+          {% if post.categories and post.categories.size > 0 %}
+            <span class="post-card-category">{{ post.categories | first }}</span>
+          {% endif %}
+          <h2 class="post-card-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h2>
+          <p class="post-card-meta">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d/%m/%Y" }}</time>
+          </p>
+          <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 140 }}</p>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
 
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a class="pagination-link" href="{{ paginator.previous_page_path | relative_url }}">&laquo; Anterior</a>
-  {% endif %}
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <span class="pagination-link active">{{ page }}</span>
-    {% elsif page == 1 %}
-      <a class="pagination-link" href="{{ site.paginate_path | relative_url | replace: 'page:num/', '' }}">{{ page }}</a>
-    {% else %}
-      <a class="pagination-link" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+  <nav class="pagination" aria-label="Paginação">
+    {% if paginator.previous_page %}
+      <a class="pagination-link" href="{{ paginator.previous_page_path | relative_url }}">&laquo; Anterior</a>
     {% endif %}
-  {% endfor %}
-  {% if paginator.next_page %}
-    <a class="pagination-link" href="{{ paginator.next_page_path | relative_url }}">Próxima &raquo;</a>
-  {% endif %}
-</div> 
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+        <span class="pagination-link active">{{ page }}</span>
+      {% elsif page == 1 %}
+        <a class="pagination-link" href="{{ '/' | relative_url }}">{{ page }}</a>
+      {% else %}
+        <a class="pagination-link" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+      {% endif %}
+    {% endfor %}
+    {% if paginator.next_page %}
+      <a class="pagination-link" href="{{ paginator.next_page_path | relative_url }}">Próxima &raquo;</a>
+    {% endif %}
+  </nav>
+</div>
