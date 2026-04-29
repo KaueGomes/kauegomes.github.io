@@ -5,9 +5,37 @@ description: Garagem C-137 — a dungeon digital de tecnologia, cultura pop e co
 ---
 
 <div class="content-wrap">
+  <section class="home-hero" aria-labelledby="home-hero-title">
+    <p class="home-kicker">Garagem C-137</p>
+    <h1 id="home-hero-title">Guias, ferramentas e experimentos para quem constrói coisas na web.</h1>
+    <p>Um laboratório prático de marketing, analytics, automação, cultura pop e pequenas ferramentas que resolvem problemas reais.</p>
+    <div class="home-actions">
+      <a class="home-action primary" href="{{ '/kit/' | relative_url }}"><i class="fa-solid fa-screwdriver-wrench"></i> Explorar Kit MacGyver</a>
+      <a class="home-action secondary" href="{{ '/the-office/' | relative_url }}"><i class="fa-solid fa-chart-line"></i> Ver posts práticos</a>
+    </div>
+  </section>
+
+  <section class="home-feature-grid" aria-label="Ferramentas em destaque">
+    <a class="home-feature-card" href="{{ '/kit/whatsapp-button/' | relative_url }}">
+      <span class="home-feature-icon"><i class="fa-brands fa-whatsapp"></i></span>
+      <span>
+        <strong>Gerador de Botão do WhatsApp</strong>
+        <small>Link, mensagem pronta e HTML para colar no site.</small>
+      </span>
+    </a>
+    <a class="home-feature-card" href="{{ '/kit/pokedex/' | relative_url }}">
+      <span class="home-feature-icon"><i class="fa-solid fa-database"></i></span>
+      <span>
+        <strong>Pokedex Multilingue</strong>
+        <small>Consulta por número, nome localizado e jogo.</small>
+      </span>
+    </a>
+  </section>
+
   <div class="posts-grid">
     {% for post in paginator.posts %}
-      <article class="post-card">
+      {% assign primary_category = post.categories | first | default: 'geral' | slugify %}
+      <article class="post-card category-{{ primary_category }}">
         {% if post.image %}
           <a class="post-card-img-link" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">
             <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">

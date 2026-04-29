@@ -3,6 +3,7 @@ layout: post
 title: "Como comprimir imagens antes de publicar no site"
 date: 2026-04-27 09:00:00 -0300
 categories: [the-office]
+image: /assets/public/posts/image-compression.svg
 tags: [performance, imagens, seo, webp, landing-page]
 description: Imagens pesadas deixam paginas lentas. Veja um checklist pratico para reduzir peso sem destruir a qualidade.
 ---

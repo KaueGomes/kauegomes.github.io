@@ -218,6 +218,7 @@ body {
 .tool-card input[type="text"],
 .tool-card input[type="number"],
 .tool-card input[type="tel"],
+.tool-card input[type="search"],
 .tool-card textarea,
 .tool-card select {
   padding: 0.6em 0.8em;

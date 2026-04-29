@@ -3,6 +3,7 @@ layout: post
 title: "Como criar uma pagina simples de links sem depender de Linktree"
 date: 2026-04-28 09:00:00 -0300
 categories: [the-office]
+image: /assets/public/posts/bio-links.svg
 tags: [site, links, bio, html, conversao]
 description: Uma pagina propria de links pode ser mais rapida, mensuravel e flexivel do que depender de uma ferramenta externa.
 ---

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Pagina de links propria</title>
+  <desc id="desc">Mockup de pagina de links hospedada no proprio site</desc>
+  <rect width="1200" height="675" fill="#111820"/>
+  <rect x="438" y="80" width="324" height="515" rx="36" fill="#1e2731" stroke="#334151"/>
+  <circle cx="600" cy="175" r="54" fill="#58a6ff"/>
+  <rect x="490" y="265" width="220" height="46" rx="14" fill="#263341"/>
+  <rect x="490" y="340" width="220" height="56" rx="18" fill="#25d366"/>
+  <rect x="490" y="420" width="220" height="56" rx="18" fill="#263341"/>
+  <rect x="490" y="500" width="220" height="56" rx="18" fill="#263341"/>
+  <text x="512" y="376" fill="#fff" font-family="Arial, sans-serif" font-size="22" font-weight="700">Kit MacGyver</text>
+</svg>

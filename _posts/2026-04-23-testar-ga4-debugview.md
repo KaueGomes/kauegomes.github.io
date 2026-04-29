@@ -3,6 +3,7 @@ layout: post
 title: "Como testar se o GA4 esta registrando eventos"
 date: 2026-04-23 09:00:00 -0300
 categories: [the-office]
+image: /assets/public/posts/ga4-debugview.svg
 tags: [ga4, analytics, debugview, google-tag-manager, metrica]
 description: Veja formas simples de conferir se seus eventos estao chegando ao GA4 antes de confiar nos relatorios.
 ---

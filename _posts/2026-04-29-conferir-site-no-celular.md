@@ -3,6 +3,7 @@ layout: post
 title: "Como conferir se seu site funciona bem no celular"
 date: 2026-04-29 09:00:00 -0300
 categories: [the-office]
+image: /assets/public/posts/mobile-check.svg
 tags: [mobile, ux, checklist, site, conversao]
 description: Um checklist rapido para revisar menu, textos, botoes, formulario e carregamento no celular.
 ---

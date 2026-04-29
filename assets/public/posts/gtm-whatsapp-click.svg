@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Cliques no WhatsApp com Google Tag Manager</title>
+  <desc id="desc">Mockup de evento whatsapp_click no fluxo do Tag Manager</desc>
+  <rect width="1200" height="675" fill="#111820"/>
+  <rect x="90" y="82" width="1020" height="511" rx="28" fill="#1e2731" stroke="#334151"/>
+  <rect x="140" y="132" width="280" height="380" rx="18" fill="#263341"/>
+  <rect x="470" y="132" width="590" height="92" rx="18" fill="#263341"/>
+  <rect x="470" y="258" width="590" height="92" rx="18" fill="#263341"/>
+  <rect x="470" y="384" width="590" height="92" rx="18" fill="#263341"/>
+  <text x="178" y="190" fill="#58a6ff" font-family="Arial, sans-serif" font-size="30" font-weight="700">GTM</text>
+  <text x="505" y="190" fill="#f4f7fb" font-family="Arial, sans-serif" font-size="34" font-weight="700">Click URL contem whatsapp</text>
+  <text x="505" y="316" fill="#25d366" font-family="Arial, sans-serif" font-size="34" font-weight="700">Evento: whatsapp_click</text>
+  <text x="505" y="442" fill="#f4f7fb" font-family="Arial, sans-serif" font-size="34" font-weight="700">Enviar para GA4</text>
+</svg>

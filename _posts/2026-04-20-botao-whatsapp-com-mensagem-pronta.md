@@ -3,6 +3,7 @@ layout: post
 title: "Como criar um botao de WhatsApp com mensagem pronta"
 date: 2026-04-20 09:00:00 -0300
 categories: [the-office]
+image: /assets/public/posts/whatsapp-message.svg
 tags: [whatsapp, landing-page, atendimento, conversao]
 description: Aprenda a montar links de WhatsApp com mensagem pronta para reduzir atrito e aumentar contatos pelo site.
 ---

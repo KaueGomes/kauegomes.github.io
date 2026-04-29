@@ -3,6 +3,7 @@ layout: post
 title: "Como criar uma URL com UTM sem baguncar seus relatorios"
 date: 2026-04-25 09:00:00 -0300
 categories: [the-office]
+image: /assets/public/posts/utm-builder.svg
 tags: [utm, analytics, ga4, campanhas, marketing]
 description: Entenda os parametros UTM essenciais e veja um padrao simples para organizar campanhas sem sujar o GA4.
 ---

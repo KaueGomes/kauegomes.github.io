@@ -3,6 +3,7 @@ layout: post
 title: "Como descobrir a cor hexadecimal de uma pagina ou logo"
 date: 2026-04-26 09:00:00 -0300
 categories: [the-office]
+image: /assets/public/posts/hex-color.svg
 tags: [design, hex, css, identidade-visual, ferramentas]
 description: Veja formas simples de encontrar codigos HEX e RGB para manter consistencia visual em paginas, posts e campanhas.
 ---

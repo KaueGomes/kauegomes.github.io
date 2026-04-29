@@ -189,6 +189,127 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =========================
+   HOME
+   ========================= */
+.home-hero {
+  margin: 0 auto 1.4em;
+  padding: 2em;
+  border: 1px solid var(--divider-color);
+  border-radius: 14px;
+  background: var(--surface-color);
+}
+
+.home-kicker {
+  margin: 0 0 0.5em;
+  color: var(--accent-color);
+  font-size: 0.82em;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.home-hero h1 {
+  max-width: 780px;
+  margin: 0;
+  font-size: 2.35em;
+  letter-spacing: 0;
+}
+
+.home-hero p:not(.home-kicker) {
+  max-width: 720px;
+  margin: 0.85em 0 0;
+  color: var(--muted-text-color);
+  font-size: 1.08em;
+}
+
+.home-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7em;
+  margin-top: 1.4em;
+}
+
+.home-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  min-height: 42px;
+  padding: 0.58em 0.95em;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid var(--divider-color);
+}
+
+.home-action.primary {
+  color: var(--button-fg);
+  background: var(--button-bg);
+  border-color: var(--button-bg);
+}
+
+.home-action.primary:hover {
+  color: var(--button-hover-fg);
+  background: var(--button-hover-bg);
+}
+
+.home-action.secondary {
+  color: var(--text-color);
+  background: var(--menu-background-color);
+}
+
+.home-action.secondary:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.home-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+  margin: 0 auto 1.6em;
+}
+
+.home-feature-card {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+  border: 1px solid var(--divider-color);
+  border-radius: 12px;
+  background: var(--menu-background-color);
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.home-feature-card:hover {
+  border-color: var(--accent-color);
+  color: var(--text-color);
+}
+
+.home-feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: var(--surface-color);
+  color: var(--accent-color);
+  flex: 0 0 auto;
+  font-size: 1.2em;
+}
+
+.home-feature-card strong,
+.home-feature-card small {
+  display: block;
+}
+
+.home-feature-card small {
+  color: var(--muted-text-color);
+  line-height: 1.45;
+}
+
+/* =========================
    GRID DE CARDS (home + categoria)
    ========================= */
 .posts-grid {
@@ -259,6 +380,16 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.7px;
   color: var(--accent-color);
 }
+
+.post-card.category-the-office .post-card-category { color: #58a6ff; }
+.post-card.category-holodeck .post-card-category { color: #d2a8ff; }
+.post-card.category-crafting-table .post-card-category { color: #56d364; }
+.post-card.category-cabo-interdimensional .post-card-category { color: #ffb86b; }
+
+.post-card.category-the-office .post-card-img-placeholder { background: linear-gradient(135deg, rgba(88, 166, 255, 0.12), var(--menu-background-color)); }
+.post-card.category-holodeck .post-card-img-placeholder { background: linear-gradient(135deg, rgba(210, 168, 255, 0.12), var(--menu-background-color)); }
+.post-card.category-crafting-table .post-card-img-placeholder { background: linear-gradient(135deg, rgba(86, 211, 100, 0.12), var(--menu-background-color)); }
+.post-card.category-cabo-interdimensional .post-card-img-placeholder { background: linear-gradient(135deg, rgba(255, 184, 107, 0.12), var(--menu-background-color)); }
 
 .post-card-title {
   font-size: 1.06em;
@@ -695,9 +826,43 @@ figure.highlight pre { margin: 0; padding: 1em; overflow-x: auto; }
    Coluna única
    ========================= */
 @media (max-width: 640px) {
+  .home-hero {
+    padding: 1.3em;
+    border-radius: 10px;
+  }
+
+  .home-hero h1 {
+    font-size: 1.65em;
+  }
+
+  .home-hero p:not(.home-kicker) {
+    font-size: 1em;
+  }
+
+  .home-actions {
+    flex-direction: column;
+  }
+
+  .home-action {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .home-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
   .posts-grid {
     grid-template-columns: 1fr;
     gap: 1.2em;
+  }
+
+  .post-card-img-link {
+    aspect-ratio: 16 / 7;
+  }
+
+  .post-card-img-placeholder {
+    font-size: 1.7em;
   }
 
   .main-content {

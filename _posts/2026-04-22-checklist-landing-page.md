@@ -3,6 +3,7 @@ layout: post
 title: "Checklist rapido antes de subir uma landing page"
 date: 2026-04-22 09:00:00 -0300
 categories: [the-office]
+image: /assets/public/posts/landing-checklist.svg
 tags: [landing-page, checklist, conversao, ga4, google-ads]
 description: Uma lista direta para revisar mensagem, CTA, mobile, tracking e velocidade antes de publicar uma landing page.
 ---

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Botao de WhatsApp com mensagem pronta</title>
+  <desc id="desc">Mockup de conversa de WhatsApp com mensagem pre-preenchida</desc>
+  <rect width="1200" height="675" fill="#111820"/>
+  <rect x="90" y="78" width="1020" height="519" rx="34" fill="#1e2731" stroke="#334151"/>
+  <circle cx="214" cy="208" r="72" fill="#25d366"/>
+  <path d="M174 250l14-51a63 63 0 1157 37l-71 14zm45-24c28 0 50-22 50-50s-22-50-50-50-50 22-50 50c0 11 3 21 9 29l-7 24 25-7c7 3 15 4 23 4z" fill="#fff"/>
+  <rect x="330" y="150" width="560" height="66" rx="20" fill="#263341"/>
+  <rect x="330" y="250" width="705" height="86" rx="24" fill="#25d366"/>
+  <rect x="330" y="368" width="470" height="58" rx="18" fill="#263341"/>
+  <text x="330" y="504" fill="#58a6ff" font-family="Arial, sans-serif" font-size="28" font-weight="700">wa.me/55...?text=Ola%2C%20vim%20pelo%20site</text>
+</svg>

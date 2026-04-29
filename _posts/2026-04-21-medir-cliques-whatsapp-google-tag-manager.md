@@ -3,6 +3,7 @@ layout: post
 title: "Como medir cliques no WhatsApp com Google Tag Manager"
 date: 2026-04-21 09:00:00 -0300
 categories: [the-office]
+image: /assets/public/posts/gtm-whatsapp-click.svg
 tags: [whatsapp, google-tag-manager, ga4, metrica, conversao]
 description: Um passo a passo curto para transformar cliques em links de WhatsApp em eventos mensuraveis no GTM e GA4.
 ---
@@ -48,9 +49,9 @@ Parametros uteis:
 
 | Parametro | Valor |
 | --- | --- |
-| link_url | {{Click URL}} |
-| link_text | {{Click Text}} |
-| page_location | {{Page URL}} |
+| link_url | {% raw %}{{Click URL}}{% endraw %} |
+| link_text | {% raw %}{{Click Text}}{% endraw %} |
+| page_location | {% raw %}{{Page URL}}{% endraw %} |
 
 ## 4. Teste antes de publicar
 

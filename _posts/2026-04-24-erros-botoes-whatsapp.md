@@ -3,6 +3,7 @@ layout: post
 title: "5 erros comuns em botoes de WhatsApp em sites"
 date: 2026-04-24 09:00:00 -0300
 categories: [the-office]
+image: /assets/public/posts/whatsapp-errors.svg
 tags: [whatsapp, ux, conversao, landing-page]
 description: Pequenos erros em botoes de WhatsApp podem derrubar contatos. Veja o que revisar em poucos minutos.
 ---

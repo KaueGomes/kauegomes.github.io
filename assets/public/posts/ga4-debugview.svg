@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">GA4 DebugView</title>
+  <desc id="desc">Mockup de eventos chegando no DebugView do GA4</desc>
+  <rect width="1200" height="675" fill="#111820"/>
+  <rect x="100" y="78" width="1000" height="520" rx="30" fill="#1e2731" stroke="#334151"/>
+  <text x="154" y="158" fill="#f4f7fb" font-family="Arial, sans-serif" font-size="42" font-weight="700">DebugView</text>
+  <line x1="210" y1="220" x2="210" y2="520" stroke="#58a6ff" stroke-width="8" stroke-linecap="round"/>
+  <g fill="#25d366">
+    <circle cx="210" cy="260" r="18"/>
+    <circle cx="210" cy="350" r="18"/>
+    <circle cx="210" cy="440" r="18"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="30" font-weight="700">
+    <text x="260" y="270" fill="#f4f7fb">page_view</text>
+    <text x="260" y="360" fill="#f4f7fb">whatsapp_click</text>
+    <text x="260" y="450" fill="#f4f7fb">generate_lead</text>
+  </g>
+  <rect x="740" y="210" width="240" height="250" rx="18" fill="#263341"/>
+  <text x="772" y="288" fill="#58a6ff" font-family="Arial, sans-serif" font-size="28" font-weight="700">tempo real</text>
+</svg>

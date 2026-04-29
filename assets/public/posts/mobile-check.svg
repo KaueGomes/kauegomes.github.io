@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Teste mobile do site</title>
+  <desc id="desc">Mockup de revisao mobile com checklist de interface</desc>
+  <rect width="1200" height="675" fill="#111820"/>
+  <rect x="185" y="80" width="285" height="520" rx="42" fill="#1e2731" stroke="#334151"/>
+  <rect x="225" y="150" width="205" height="330" rx="22" fill="#263341"/>
+  <rect x="245" y="180" width="165" height="34" rx="10" fill="#58a6ff"/>
+  <rect x="245" y="245" width="165" height="92" rx="14" fill="#334151"/>
+  <rect x="245" y="365" width="165" height="54" rx="18" fill="#25d366"/>
+  <g fill="none" stroke="#25d366" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M620 215l28 28 58-70"/>
+    <path d="M620 325l28 28 58-70"/>
+    <path d="M620 435l28 28 58-70"/>
+  </g>
+  <g fill="#f4f7fb" font-family="Arial, sans-serif" font-size="34" font-weight="700">
+    <text x="745" y="229">Menu</text>
+    <text x="745" y="339">CTA</text>
+    <text x="745" y="449">Formulario</text>
+  </g>
+</svg>

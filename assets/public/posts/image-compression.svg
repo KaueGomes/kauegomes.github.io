@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Comprimir imagens para web</title>
+  <desc id="desc">Comparacao visual entre arquivo pesado e imagem otimizada</desc>
+  <rect width="1200" height="675" fill="#111820"/>
+  <rect x="120" y="130" width="390" height="350" rx="26" fill="#263341" stroke="#334151"/>
+  <rect x="690" y="130" width="390" height="350" rx="26" fill="#263341" stroke="#334151"/>
+  <text x="190" y="555" fill="#ff7b72" font-family="Arial, sans-serif" font-size="34" font-weight="700">3.8 MB</text>
+  <text x="765" y="555" fill="#25d366" font-family="Arial, sans-serif" font-size="34" font-weight="700">240 KB</text>
+  <path d="M545 310h100" stroke="#58a6ff" stroke-width="12" stroke-linecap="round"/>
+  <path d="M615 270l44 40-44 40" fill="none" stroke="#58a6ff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="315" cy="305" r="82" fill="#465668"/>
+  <circle cx="885" cy="305" r="82" fill="#58a6ff"/>
+</svg>
