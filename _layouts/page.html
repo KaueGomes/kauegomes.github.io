@@ -11,8 +11,10 @@
     <link rel="stylesheet" href="{{ '/assets/css/theme/dark_mode.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/theme/sephia_mode.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/syntax.css' | relative_url }}">
+    {% include google-tag-manager-head.html %}
   </head>
   <body>
+    {% include google-tag-manager-body.html %}
     <header class="site-header">
       {% include menu.html %}
     </header>

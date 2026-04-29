@@ -13,8 +13,10 @@
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <!-- kit.css traz os estilos específicos das ferramentas -->
     <link rel="stylesheet" href="{{ '/assets/css/kit/kit.css' | relative_url }}">
+    {% include google-tag-manager-head.html %}
   </head>
   <body>
+    {% include google-tag-manager-body.html %}
     <header class="site-header">
       {% include menu.html %}
     </header>
