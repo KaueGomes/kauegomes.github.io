@@ -44,7 +44,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Explorador de arquivos"
             }
           },
           {
@@ -160,29 +160,29 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Criar nova base": false
     }
   },
-  "active": "fc8c8f6e0413e232",
+  "active": "fb18302a8446170b",
   "lastOpenFiles": [
-    "SiteExemplo/index.js",
-    "SiteExemplo/index.css",
-    "SiteExemplo/Index.js",
-    "SiteExemplo/Index.css",
-    "SiteExemplo/index.html",
-    "SiteExemplo/newsletter.html",
-    "SiteExemplo/checkout.html",
-    "SiteExemplo/contato.html",
-    "SiteExemplo",
-    "_site/tagueamento/rastreio/redes sociais/2025/09/17/welcome-to-jekyll-1.html",
-    "_site/tagueamento/rastreio/redes sociais/2025/09/17",
+    "_includes/google-tag-manager-body.html",
+    "_includes/google-tag-manager-head.html",
+    "_site/the-office/2025/09/17/welcome-to-jekyll-1.html",
+    "_site/the-office/2025/09/17",
     "_site/assets/public/whatsapp_javascript/logo_whatsapp.png",
+    "_site/assets/css/theme/sephia_mode.css",
+    "_site/assets/css/theme/light_mode.css",
+    "_site/assets/css/theme/dark_mode.css",
+    "_site/assets/css/kit/kit.css",
+    "_site/the-office/2025/09",
+    "_site/kit/whatsapp-button/index.html",
+    "_site/kit/hex-picker/index.html",
     "assets/public/whatsapp_javascript/logo_whatsapp.png",
     "_posts/2025-07-26-welcome-to-jekyll.md",
     "_posts/2025-07-26-welcome-to-jekyll 1.md",
