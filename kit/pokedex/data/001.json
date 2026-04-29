@@ -1,0 +1,61 @@
+{
+  "id": 1,
+  "dex": "001",
+  "slug": "bulbasaur",
+  "names": {
+    "en": "Bulbasaur",
+    "pt": "Bulbasaur",
+    "fr": "Bulbizarre",
+    "es": "Bulbasaur",
+    "ja": "Fushigidane"
+  },
+  "aliases": ["bulbassauro", "bulbasauro", "bulbizarre", "fushigidane", "001", "1"],
+  "types": ["Grass", "Poison"],
+  "category": "Seed Pokemon",
+  "height": "0.7 m",
+  "weight": "6.9 kg",
+  "evolves_to": [
+    { "name": "Ivysaur", "level": 16 },
+    { "name": "Venusaur", "level": 32 }
+  ],
+  "base_stats": {
+    "hp": 45,
+    "attack": 49,
+    "defense": 49,
+    "special_attack": 65,
+    "special_defense": 65,
+    "speed": 45
+  },
+  "games": {
+    "red_blue": {
+      "label": "Red / Blue",
+      "availability": "Starter Pokemon from Professor Oak.",
+      "useful_notes": [
+        "Strong early matchup against Brock and Misty.",
+        "Learns status moves that help catch wild Pokemon.",
+        "Struggles more against Flying, Fire, Psychic and Ice threats."
+      ],
+      "recommended_moves": ["Vine Whip", "Razor Leaf", "Sleep Powder", "Leech Seed"]
+    },
+    "yellow": {
+      "label": "Yellow",
+      "availability": "Gift in Cerulean City after Pikachu is happy enough.",
+      "useful_notes": [
+        "Great support choice after the early game.",
+        "Sleep Powder and Leech Seed are useful in longer fights.",
+        "Arrives after Brock, so it does not solve the first gym immediately."
+      ],
+      "recommended_moves": ["Razor Leaf", "Sleep Powder", "Leech Seed", "Body Slam"]
+    },
+    "ruby_sapphire_emerald": {
+      "label": "Ruby / Sapphire / Emerald",
+      "availability": "Not normally available in Hoenn without trade or event transfer.",
+      "useful_notes": [
+        "If traded in, it works best as a status and sustain Pokemon.",
+        "Abilities exist in this generation, so check the ability before planning.",
+        "Its Grass typing is useful against Water, Ground and Rock Pokemon."
+      ],
+      "recommended_moves": ["Giga Drain", "Sleep Powder", "Leech Seed", "Sludge Bomb"]
+    }
+  }
+}

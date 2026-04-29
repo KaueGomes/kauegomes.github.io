@@ -1,0 +1,61 @@
+{
+  "id": 4,
+  "dex": "004",
+  "slug": "charmander",
+  "names": {
+    "en": "Charmander",
+    "pt": "Charmander",
+    "fr": "Salameche",
+    "es": "Charmander",
+    "ja": "Hitokage"
+  },
+  "aliases": ["salameche", "salamèche", "hitokage", "004", "4"],
+  "types": ["Fire"],
+  "category": "Lizard Pokemon",
+  "height": "0.6 m",
+  "weight": "8.5 kg",
+  "evolves_to": [
+    { "name": "Charmeleon", "level": 16 },
+    { "name": "Charizard", "level": 36 }
+  ],
+  "base_stats": {
+    "hp": 39,
+    "attack": 52,
+    "defense": 43,
+    "special_attack": 60,
+    "special_defense": 50,
+    "speed": 65
+  },
+  "games": {
+    "red_blue": {
+      "label": "Red / Blue",
+      "availability": "Starter Pokemon from Professor Oak.",
+      "useful_notes": [
+        "Harder early route because Brock resists Fire.",
+        "Becomes much stronger once it has better coverage and evolves.",
+        "Good Speed makes it comfortable for regular trainer battles."
+      ],
+      "recommended_moves": ["Ember", "Slash", "Flamethrower", "Dig"]
+    },
+    "yellow": {
+      "label": "Yellow",
+      "availability": "Gift on Route 24 from a trainer north of Cerulean City.",
+      "useful_notes": [
+        "Available after the first gym.",
+        "Useful against Grass, Bug and Ice Pokemon.",
+        "Needs help against Rock, Ground and Water Pokemon."
+      ],
+      "recommended_moves": ["Flamethrower", "Slash", "Dig", "Body Slam"]
+    },
+    "ruby_sapphire_emerald": {
+      "label": "Ruby / Sapphire / Emerald",
+      "availability": "Not normally available in Hoenn without trade or event transfer.",
+      "useful_notes": [
+        "If traded in, it is a fast offensive Fire option.",
+        "Charizard gains strong mixed coverage later.",
+        "Be careful around Rock moves because of Charizard's double weakness after evolving."
+      ],
+      "recommended_moves": ["Flamethrower", "Dragon Claw", "Aerial Ace", "Earthquake"]
+    }
+  }
+}

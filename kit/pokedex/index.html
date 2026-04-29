@@ -1,0 +1,209 @@
+---
+layout: kit
+title: Pokedex Multilingue
+permalink: /kit/pokedex/
+description: Consulte Pokemon por numero ou nome localizado, escolhendo idioma e jogo.
+---
+
+<div class="tool-shell pokedex-tool">
+  <a class="back-link" href="{{ '/kit/' | relative_url }}"><i class="fa-solid fa-arrow-left"></i> Voltar ao Kit</a>
+
+  <h1>Pokedex Multilingue</h1>
+  <p class="subtitle">Busque por numero ou nome no idioma do jogo. Este exemplo usa os tres iniciais de Kanto como modelo.</p>
+
+  <div class="tool-card pokedex-panel">
+    <div class="pokedex-controls">
+      <div class="form-row">
+        <label for="pokemon-language">Idioma do jogo</label>
+        <select id="pokemon-language">
+          <option value="pt">Portugues</option>
+          <option value="en">English</option>
+          <option value="fr">Francais</option>
+          <option value="es">Espanol</option>
+          <option value="ja">Japanese romaji</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="pokemon-game">Jogo</label>
+        <select id="pokemon-game">
+          <option value="red_blue">Red / Blue</option>
+          <option value="yellow">Yellow</option>
+          <option value="ruby_sapphire_emerald">Ruby / Sapphire / Emerald</option>
+        </select>
+      </div>
+
+      <div class="form-row search-row">
+        <label for="pokemon-search">Nome ou numero da Pokedex</label>
+        <input id="pokemon-search" type="search" placeholder="Ex.: 001, Bulbizarre, Squirtle" autocomplete="off">
+        <p class="help">A busca considera o idioma selecionado e apelidos cadastrados no JSON.</p>
+      </div>
+    </div>
+
+    <div class="pokedex-results" id="pokedex-results" aria-live="polite"></div>
+  </div>
+</div>
+
+<script>
+  (function pokedexTool() {
+    var dataFiles = [
+      '{{ "/kit/pokedex/data/001.json" | relative_url }}',
+      '{{ "/kit/pokedex/data/004.json" | relative_url }}',
+      '{{ "/kit/pokedex/data/007.json" | relative_url }}'
+    ];
+    var pokemon = [];
+    var language = document.getElementById('pokemon-language');
+    var game = document.getElementById('pokemon-game');
+    var search = document.getElementById('pokemon-search');
+    var results = document.getElementById('pokedex-results');
+
+    function normalize(value) {
+      return String(value || '')
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9]/g, '');
+    }
+
+    function displayName(entry) {
+      return entry.names[language.value] || entry.names.en;
+    }
+
+    function matches(entry, query) {
+      if (!query) return true;
+      var q = normalize(query);
+      var candidates = [
+        entry.dex,
+        String(entry.id),
+        entry.slug,
+        entry.names.en,
+        entry.names[language.value]
+      ].concat(entry.aliases || []);
+      return candidates.some(function (candidate) {
+        return normalize(candidate).indexOf(q) !== -1;
+      });
+    }
+
+    function score(entry, query) {
+      var q = normalize(query);
+      if (!q) return entry.id;
+      var localized = normalize(entry.names[language.value]);
+      var english = normalize(entry.names.en);
+      if (entry.dex === q.padStart(3, '0') || String(entry.id) === q) return 0;
+      if (localized === q) return 1;
+      if (english === q) return 2;
+      if ((entry.aliases || []).some(function (alias) { return normalize(alias) === q; })) return 3;
+      if (localized.indexOf(q) === 0) return 4;
+      if (english.indexOf(q) === 0) return 5;
+      return 10 + entry.id;
+    }
+
+    function isExactSelection(entry, query) {
+      var q = normalize(query);
+      var candidates = [
+        entry.dex,
+        String(entry.id),
+        entry.slug,
+        entry.names.en,
+        entry.names[language.value]
+      ].concat(entry.aliases || []);
+      return candidates.some(function (candidate) {
+        return normalize(candidate) === q;
+      });
+    }
+
+    function statRows(stats) {
+      return Object.keys(stats).map(function (key) {
+        var label = key.replace(/_/g, ' ');
+        return '<div class="stat-row"><span>' + label + '</span><strong>' + stats[key] + '</strong></div>';
+      }).join('');
+    }
+
+    function renderCard(entry) {
+      var gameInfo = entry.games[game.value];
+      var evolutions = entry.evolves_to.map(function (evo) {
+        return evo.name + ' (Lv. ' + evo.level + ')';
+      }).join(' -> ');
+      var types = entry.types.map(function (type) {
+        return '<span class="type-pill type-' + type.toLowerCase() + '">' + type + '</span>';
+      }).join('');
+      var notes = gameInfo.useful_notes.map(function (note) {
+        return '<li>' + note + '</li>';
+      }).join('');
+      var moves = gameInfo.recommended_moves.map(function (move) {
+        return '<span class="move-pill">' + move + '</span>';
+      }).join('');
+
+      return [
+        '<article class="pokedex-card">',
+          '<div class="pokedex-card-head">',
+            '<div>',
+              '<span class="dex-number">#' + entry.dex + '</span>',
+              '<h2>' + displayName(entry) + '</h2>',
+              '<p>' + entry.category + ' · ' + entry.height + ' · ' + entry.weight + '</p>',
+            '</div>',
+            '<div class="type-list">' + types + '</div>',
+          '</div>',
+          '<div class="pokedex-section">',
+            '<h3>Disponibilidade em ' + gameInfo.label + '</h3>',
+            '<p>' + gameInfo.availability + '</p>',
+          '</div>',
+          '<div class="pokedex-section">',
+            '<h3>Notas uteis</h3>',
+            '<ul>' + notes + '</ul>',
+          '</div>',
+          '<div class="pokedex-section">',
+            '<h3>Moves recomendados</h3>',
+            '<div class="move-list">' + moves + '</div>',
+          '</div>',
+          '<div class="pokedex-split">',
+            '<div class="pokedex-section">',
+              '<h3>Evolucao</h3>',
+              '<p>' + evolutions + '</p>',
+            '</div>',
+            '<div class="pokedex-section">',
+              '<h3>Base stats</h3>',
+              '<div class="stat-list">' + statRows(entry.base_stats) + '</div>',
+            '</div>',
+          '</div>',
+        '</article>'
+      ].join('');
+    }
+
+    function render() {
+      var query = search.value.trim();
+      if (!query) {
+        results.innerHTML = renderCard(pokemon[0]);
+        return;
+      }
+      var filtered = pokemon.filter(function (entry) { return matches(entry, query); });
+      if (!filtered.length) {
+        results.innerHTML = '<p class="search-empty">Nenhum Pokemon encontrado. Tente numero, nome em outro idioma ou alias cadastrado.</p>';
+        return;
+      }
+      filtered.sort(function (a, b) { return score(a, query) - score(b, query); });
+      var selected = filtered[0];
+      if (isExactSelection(selected, query) && search.value !== selected.names.en) {
+        search.value = selected.names.en;
+      }
+      results.innerHTML = renderCard(selected);
+    }
+
+    Promise.all(dataFiles.map(function (url) {
+      return fetch(url).then(function (response) {
+        if (!response.ok) throw new Error('Nao foi possivel carregar ' + url);
+        return response.json();
+      });
+    })).then(function (entries) {
+      pokemon = entries.sort(function (a, b) { return a.id - b.id; });
+      search.value = 'Bulbasaur';
+      render();
+    }).catch(function (error) {
+      results.innerHTML = '<p class="search-empty">' + error.message + '</p>';
+    });
+
+    language.addEventListener('change', render);
+    game.addEventListener('change', render);
+    search.addEventListener('input', render);
+  })();
+</script>
