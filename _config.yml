@@ -3,13 +3,12 @@
 # =========================
 
 title: Garagem C-137
-tagline: Dungeon digital de tecnologia, cultura pop e construção
+tagline: Ferramentas, guias e histórias para quem joga
 author: Kaue Gomes
 email: kauedellabarbagomes@gmail.com
 description: >-
-  Garagem C-137 é a dungeon digital de Kaue Gomes — experimentos com tecnologia,
-  cultura pop, games, marcenaria, Web Analytics, ferramentas e um pouco de
-  filosofia de boteco. Nerd, construtor e sobrevivente dos anos 2000.
+  Garagem C-137 é um portal independente de ferramentas, guias, detonados,
+  walkthroughs e conversas sobre jogos.
 
 baseurl: ""
 url: "https://kauegomes.github.io"
@@ -32,10 +31,9 @@ paginate_path: "/page:num/"
 # Categorias do site — usadas por páginas de categoria e pela busca
 # Slug     → Nome de exibição
 categories_map:
-  holodeck: "Holodeck"
-  crafting-table: "Crafting Table"
-  the-office: "The Office"
-  cabo-interdimensional: "Cabo Interdimensional"
+  guias: "Guias"
+  detonados: "Detonados"
+  artigos: "Artigos"
 
 # Itens excluídos do build
 exclude:

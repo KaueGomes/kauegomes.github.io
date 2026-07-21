@@ -2,9 +2,9 @@
 layout: post
 title: "Título do Post"
 date: 2026-01-01 12:00:00 -0300
-categories: [the-office]   # opções: holodeck, crafting-table, the-office, cabo-interdimensional
-image: /assets/public/pasta-do-post/capa.png
-tags: [tag1, tag2, tag3]
+categories: [guias]   # opções: guias, detonados, artigos
+image: /assets/public/nome-do-jogo/capa-do-post.png
+tags: [nome-do-jogo, plataforma, assunto]
 description: Resumo curto de até 180 caracteres para SEO e busca.
 ---
 
@@ -14,6 +14,6 @@ Conteúdo do post aqui.
 
 Parágrafo normal.
 
-{% highlight JavaScript %}
-console.log('bloco de código');
+{% highlight text %}
+Exemplo, sequência de comandos ou anotação do jogo.
 {% endhighlight %}

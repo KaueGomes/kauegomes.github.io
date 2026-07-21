@@ -1,39 +1,43 @@
 ---
 layout: kit
-title: Kit MacGyver
+title: Ferramentas
 permalink: /kit/
-description: Ferramentas simples do Kit MacGyver — pequenas soluções que rodam direto no navegador.
+description: Ferramentas para jogos que funcionam direto no navegador.
 ---
 
-<h1>Kit MacGyver</h1>
-<p class="subtitle">Ferramentas simples que rodam direto no navegador. Nenhum dado sai do seu computador.</p>
+<div class="tools-page">
+  <header class="tools-heading">
+    <p class="eyebrow">Utilitários de campo</p>
+    <h1>Ferramentas para sua jornada</h1>
+    <p>Consultas e calculadoras feitas para resolver dúvidas enquanto você joga. Tudo funciona direto no navegador.</p>
+  </header>
 
-<div class="kit-grid">
-  <a class="kit-card" href="{{ '/kit/whatsapp-button/' | relative_url }}">
-    <span class="kit-icon"><i class="fa-brands fa-whatsapp"></i></span>
-    <h3>Gerador de Botão do WhatsApp</h3>
-    <p>Monta o link e o HTML do botão com telefone, mensagem e contador de caracteres. Pronto para colar no site.</p>
-    <span class="kit-badge ready">Pronto</span>
-  </a>
+  <section aria-labelledby="available-tools-title">
+    <div class="section-heading section-heading-inline compact-heading">
+      <div>
+        <p class="eyebrow">Disponível agora</p>
+        <h2 id="available-tools-title">Abra e use</h2>
+      </div>
+      <span class="status-count">1 ferramenta</span>
+    </div>
 
-  <a class="kit-card" href="{{ '/kit/pokedex/' | relative_url }}">
-    <span class="kit-icon"><i class="fa-solid fa-database"></i></span>
-    <h3>Pokedex Multilingue</h3>
-    <p>Busque Pokemon por numero ou nome localizado e veja notas uteis por jogo. Exemplo com os iniciais de Kanto.</p>
-    <span class="kit-badge ready">Pronto</span>
-  </a>
+    <div class="tool-list">
+      <a class="tool-entry" href="{{ '/kit/pokedex/' | relative_url }}">
+        <span class="tool-entry-icon"><i class="fa-solid fa-earth-americas" aria-hidden="true"></i></span>
+        <span class="tool-entry-copy">
+          <strong>Pokédex Multilíngue</strong>
+          <small>Encontre Pokémon em vários idiomas e consulte imagens e movimentos por nível em cada jogo.</small>
+        </span>
+        <span class="tool-entry-action" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+    </div>
+  </section>
 
-  <a class="kit-card" href="{{ '/kit/hex-picker/' | relative_url }}">
-    <span class="kit-icon"><i class="fa-solid fa-palette"></i></span>
-    <h3>Coletor de Paleta (Hex)</h3>
-    <p>Selecione cores e monte uma paleta com códigos Hex / RGB prontos para copiar.</p>
-    <span class="kit-badge soon">Em breve</span>
-  </a>
-
-  <a class="kit-card" href="{{ '/kit/currency/' | relative_url }}">
-    <span class="kit-icon"><i class="fa-solid fa-dollar-sign"></i></span>
-    <h3>Conversor de Moeda</h3>
-    <p>Converte valores entre moedas com taxas atualizadas. Útil para comprinhas internacionais.</p>
-    <span class="kit-badge soon">Em breve</span>
-  </a>
+  <section class="tool-roadmap" aria-labelledby="roadmap-title">
+    <div>
+      <p class="eyebrow">Próximos espaços</p>
+      <h2 id="roadmap-title">A bancada vai crescer</h2>
+    </div>
+    <p>Novas ferramentas serão organizadas por jogo, sempre com um objetivo claro e sem instalações desnecessárias.</p>
+  </section>
 </div>
