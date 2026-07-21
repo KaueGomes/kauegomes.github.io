@@ -68,8 +68,8 @@ description: Consulte nomes, imagens e movimentos por nível em diferentes idiom
   (function pokedexTool() {
     var API_BASE = 'https://pokeapi.co/api/v2';
     var CACHE_NAME = 'garagem-pokedex-v2';
-    var pokemonIndexUrl = '{{ "/kit/pokedex/data/pokemon-index.json" | relative_url }}';
-    var moveIndexUrl = '{{ "/kit/pokedex/data/move-index.json" | relative_url }}';
+    var pokemonIndexUrl = '{{ "/kit/pokedex/data/pokemon-index.json" | relative_url }}?v={{ site.time | date: "%s" }}';
+    var moveIndexUrl = '{{ "/kit/pokedex/data/move-index.json" | relative_url }}?v={{ site.time | date: "%s" }}';
     var pokemonIndex = [];
     var pokemonById = new Map();
     var moveBySlug = new Map();
