@@ -1,31 +1,35 @@
 # Garagem C-137
 
-Blog pessoal do Kaue Gomes — Jekyll + GitHub Pages.
-Dungeon digital de tecnologia, cultura pop, games, construção e ferramentas.
+Portal independente de jogos feito com Jekyll e publicado no GitHub Pages.
+O site usa uma identidade visual escura única.
 
-## Estrutura
+## Conteúdo
 
-- `_config.yml` — identidade do site, paginação, mapa de categorias.
-- `_layouts/` — `default`, `page`, `post`, `category` (listas paginadas por categoria) e `kit` (layout app sem sidebar).
-- `_includes/menu.html` — sidebar + navegação + seletor de tema.
-- `_posts/` — posts do blog (use `categories: [slug]` com um dos slugs do mapa).
-- `assets/css/main.css` — estilos globais do blog.
-- `assets/css/theme/` — variáveis CSS dos três temas (`light`, `dark`, `sephia`).
-- `assets/css/kit/kit.css` — estilos exclusivos do Kit MacGyver.
-- `assets/js/main.js` — tema, menu mobile, enhancement de blocos de código.
+- `/kit/` — ferramentas para jogos.
+- `/kit/pokedex/` — Pokédex Multilíngue.
+- `/guias/` — guias de mecânicas, builds e estratégias.
+- `/detonados/` — detonados e walkthroughs.
+- `/artigos/` — análises e conversas sobre jogos.
 
-## Categorias (slugs válidos)
+## Publicações
 
-- `holodeck` — jogos, walkthroughs, emuladores
-- `crafting-table` — projetos físicos, marcenaria, eletrônica
-- `the-office` — profissional, Ads, analytics
-- `cabo-interdimensional` — RSS curado (em breve)
+Crie os textos em `_posts/` usando uma das categorias abaixo:
 
-## Kit MacGyver
+- `guias`
+- `detonados`
+- `artigos`
 
-- `/kit/` — lista de ferramentas
-- `/kit/whatsapp-button/` — gerador funcional de botão do WhatsApp
-- `/kit/hex-picker/`, `/kit/currency/` — placeholders (em construção)
+Use `model_new_post.md` como ponto de partida.
+
+## Atualizar a Pokédex
+
+Os índices de nomes são gerados pela PokéAPI. Para atualizá-los:
+
+```bash
+node scripts/sync-pokedex.mjs
+```
+
+A página usa esses índices para a busca multilíngue e consulta a PokéAPI diretamente para carregar imagens e movimentos por nível.
 
 ## Rodar localmente
 

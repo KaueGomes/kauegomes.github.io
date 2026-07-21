@@ -1,42 +1,7 @@
 // ============================================================
 // Garagem C-137 — main.js
-// Responsável por: tema (light/dark/sephia), menu mobile,
-// enhancement de blocos de código (header + copy button).
+// Responsável por: menu mobile e enhancement de blocos de código.
 // ============================================================
-
-(function themeToggle() {
-  const THEME_KEY = 'theme-mode';
-  const body = document.body;
-
-  function setTheme(mode) {
-    body.classList.remove('light-mode', 'dark-mode', 'sephia-mode');
-    body.classList.add(mode + '-mode');
-    localStorage.setItem(THEME_KEY, mode);
-    // Sincroniza todos os selects de tema na página
-    document.querySelectorAll('#theme-select').forEach(function (sel) {
-      sel.value = mode;
-    });
-  }
-
-  function init() {
-    let saved = localStorage.getItem(THEME_KEY);
-    if (!saved) {
-      saved = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-    setTheme(saved);
-
-    document.querySelectorAll('#theme-select').forEach(function (sel) {
-      sel.value = saved;
-      sel.addEventListener('change', function () { setTheme(this.value); });
-    });
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
-})();
 
 (function enhanceCodeBlocks() {
   function init() {
